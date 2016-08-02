@@ -1,0 +1,168 @@
+{
+    "id": "com.everspring",
+    "name": {
+        "en": "Everspring"
+    },
+    "version": "0.0.1",
+    "compatibility": ">=0.9.0",
+    "description": {
+	    "en": "Everspring"
+    },
+    "category": [ "climate" ],
+    "images": {
+	    "large": "/assets/images/large.jpg",
+	    "small": "/assets/images/small.jpg"
+    },
+    "author": {
+        "name": "Ralf van Dooren",
+        "email": "ralfvd@gmail.com"
+    },
+  "drivers": [
+      {
+      "id": "ST-814",
+      "name": {
+       "en": "Everspring ST-814"
+      },
+      "zwave": {
+       "manufacturerId": 96,
+       "productTypeId": 6,
+       "productId": 1,
+       "learnmode": {
+        "image": "/drivers/ST-814/assets/learnmode.svg",
+        "instruction": {
+         "en": "Press the C/F button on your ST-814 3 times",
+         "nl": "Druk 3 keer op de C/F knop op de ST-814 "
+        }
+      },
+       "associationGroups": [ 1 ]
+      },
+      "class": "sensor",
+      "capabilities": [ "measure_battery", "measure_humidity","measure_temperature" ],
+      "images": {
+       "large": "/drivers/ST-814/assets/images/large.png",
+       "small": "/drivers/ST-814/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "basic-set-level",
+          "type": "number",
+          "label": {
+            "en": "Dim level (0 = off)"
+          },
+          "value": 99,
+          "attr": {
+            "min": 0,
+            "max": 99
+          },
+          "hint": {
+            "en": "Set basic set value to be on (or Dim Level) /off"
+          }
+        },
+        {
+          "id": "temperature-on-trigger",
+          "type": "number",
+          "label": {
+            "en": "Temperature on trigger"
+          },
+          "value": 30,
+          "attr": {
+            "min": -20,
+            "max": 99
+          },
+          "hint": {
+            "en": "-20 - 50 ; 99: clear value"
+          }
+        },
+        {
+          "id": "temperature-off-trigger",
+          "type": "number",
+          "label": {
+            "en": "Temperature off trigger"
+          },
+          "value": 20,
+          "attr": {
+            "min": -20,
+            "max": 99
+          },
+          "hint": {
+            "en": "-20 - 50 ; 99: clear value"
+          }
+        },
+        {
+          "id": "humidity-on-trigger",
+          "type": "number",
+          "label": {
+            "en": "Humidity on trigger"
+          },
+          "value": 50,
+          "attr": {
+            "min": 20,
+            "max": 99
+          },
+          "hint": {
+            "en": "20 - 90 ; 99: clear value"
+          }
+        },
+        {
+          "id": "humidity-off-trigger",
+          "type": "number",
+          "label": {
+            "en": "Humidity off trigger"
+          },
+          "value": 40,
+          "attr": {
+            "min": 20,
+            "max": 99
+          },
+          "hint": {
+            "en": "20 - 90 ; 99: clear value"
+          }
+        },
+        {
+          "id": "auto-report-time-interval",
+          "type": "number",
+          "label": {
+            "en": "Report time interval"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 1439
+          },
+          "hint": {
+            "en": "Set auto report time interval to be _ mins"
+          }
+        },
+        {
+          "id": "auto-report-temp-change",
+          "type": "number",
+          "label": {
+            "en": "Report temperature change"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 70
+          },
+          "hint": {
+            "en": "Set auto report temp. trigger interval to be _ degree. "
+          }
+        },
+        {
+          "id": "auto-report-humidity-change",
+          "type": "number",
+          "label": {
+            "en": "Report humidity change"
+          },
+          "value": 0,
+          "attr": {
+            "min": 5,
+            "max": 70
+          },
+          "hint": {
+            "en": "Set auto report humidity trigger interval to be _ %. "
+          }
+        }
+      ]
+    }]
+}
