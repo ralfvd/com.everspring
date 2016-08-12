@@ -3,7 +3,7 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.0.1",
+    "version": "0.0.2",
     "compatibility": ">=0.9.0",
     "description": {
 	    "en": "Everspring"
@@ -17,8 +17,16 @@
         "name": "Ralf van Dooren",
         "email": "ralfvd@gmail.com"
     },
+		"contributors" : {
+				"developers": [
+            {
+								"name": "Robin van Kekem",
+								"email": "nl.inversion@gmail.com"
+            }
+        ]
+		},
   "drivers": [
-  {
+  	{
 		    "id": "HSP02",
 		    "name": {
 			    "en": "Motion detector",

@@ -5,6 +5,7 @@ This app adds support for Everspring devices.
 Supported devices:
 
 - Everspring ST-814 ( Temperature & Humidity sensor )
+- Everspring HSP02 ( PIR motion sensor )
 
 ### Settings
 
@@ -19,19 +20,30 @@ These will trigger Flows and entries in Insight
 
 ### Flow support
 
-Everspring ST-814
 *Triggers*
-
+Everspring ST-814
 - When temperature changes: triggers a flow when temperature changes
 - When humidity changes: triggers a flow when humidity changes
 - When battery changes: triggers a flow when battery level changes
 
+Everspring HSP02
+- When motion detected: triggers a flow when motion is detected
+- When motion detection ends: triggers a flow when motion detection ends
+
 *Conditions*
 
-No conditions defined at this moment
+Everspring ST-814
+- No conditions defined at this moment
+
+Everspring HSP02
+- No conditions defined at this moment
 
 *Actions*
 
+Everspring ST-814
+- No actions defined
+
+Everspring HSP02
 - No actions defined
 
 ### Speech
@@ -50,12 +62,14 @@ If you like the app, consider a donation to support development
 ### Known bugs
 
 None
+
 ### Unknown bugs
 
 Yes ;-)
 
 ### Changelog
 
+- V0.0.2 2016-08-12 : Add support for HSP02 motion sensor (Robin van Kekem)
 - V0.0.1 2016-08-02 : First test release on Github
 
 [pp-donate-link]: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ralf%40iae%2enl&lc=GB&item_name=homey%2deverspring&item_number=homey%2devohome&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
