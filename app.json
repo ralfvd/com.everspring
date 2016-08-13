@@ -3,12 +3,12 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.0.1",
+    "version": "0.0.2",
     "compatibility": ">=0.9.0",
     "description": {
 	    "en": "Everspring"
     },
-    "category": [ "climate" ],
+    "category": [ "climate", "security" ],
     "images": {
 	    "large": "/assets/images/large.jpg",
 	    "small": "/assets/images/small.jpg"
@@ -17,7 +17,196 @@
         "name": "Ralf van Dooren",
         "email": "ralfvd@gmail.com"
     },
+		"contributors" : {
+				"developers": [
+            {
+								"name": "Robin van Kekem",
+								"email": "nl.inversion@gmail.com"
+            }
+        ]
+		},
   "drivers": [
+  	{
+		    "id": "HSP02",
+		    "name": {
+			    "en": "Motion detector",
+          "nl": "Bewegingsmelder"
+		    },
+		    "zwave": {
+			    "manufacturerId": 278,
+			    "productTypeId": 1,
+			    "productId": 1,
+			    "learnmode": {
+				    "image": "/drivers/HSP02/assets/learnmode.svg",
+				    "instruction": {
+					    "en": "Tripple click the little button behind the battery cover",
+					    "nl": "Driemaal drukken op de knop achter de batterij klep"
+				    }
+				},
+			    "associationGroups": [ 1, 2 ],
+				"defaultConfiguration": [
+					{
+						"id": "basic_set_level",
+						"size": 1,
+						"value": 99
+					},
+					{
+						"id": "enable_disable_sensor_detection",
+						"size": 1,
+						"value": "1"
+					},
+					{
+						"id": "sensitivity_level",
+						"size": 1,
+						"value": 6
+					},
+					{
+						"id": "trigger_interval",
+						"size": 2,
+						"value": 180
+					},
+					{
+						"id": "lux_level",
+						"size": 1,
+						"value": 10
+					},
+					{
+						"id": "on_off_duration",
+						"size": 2,
+						"value": 15
+					}
+				]
+		    },
+		    "class": "sensor",
+		    "capabilities": [ "alarm_motion" ],
+		    "images": {
+			    "large": "/drivers/HSP02/assets/images/large.png",
+			    "small": "/drivers/HSP02/assets/images/small.png"
+		    },
+        "settings": [
+			{
+				"id": "basic_set_level",
+				"type": "number",
+				"label": {
+					"en": "Basic set level",
+					"nl": "Basis inschakel instelling"
+				},
+				"value": 99,
+				"hint": {
+					"en": "Value to be sent with a BASIC SET command.",
+					"nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+				},
+            	"attr": {
+					"min": 1,
+					"max": 99
+				}
+			},
+			{
+				"id": "enable_disable_sensor_detection",
+				"type": "dropdown",
+				"label": {
+					"en": "Set motion detection function for groups",
+              		"nl": "Schakel bewegingsmelding in voor groepen"
+				},
+				"value": "1",
+				"hint": {
+					"en": "Groups to send motion detection to",
+              		"nl": "Bepaald voor welke groepen de bewegingsmelding verstuurd wordt"
+				},
+				"values": [
+					{
+						"id": "1",
+						"label": {
+							"en": "Group 1 enabled / group 2 enabled (default)",
+							"nl": "Groep 1 ingeschakeld / groep 2 ingeschakeld (standaard)"
+						}
+					},
+					{
+						"id": "2",
+						"label": {
+							"en": "Group 1 enabled / group 2 disabled",
+							"nl": "Groep 1 ingeschakeld / groep 2 uitgeschakeld"
+						}
+					},
+					{
+						"id": "3",
+						"label": {
+							"en": "Group 1 disabled / group 2 disabled",
+							"nl": "Groep 1 uitgeschakeld / groep 2 uitgeschakeld"
+						}
+					}
+				]
+			},
+			{
+				"id": "sensitivity_level",
+				"type": "number",
+				"label": {
+					"en": "Sensitivity level",
+              		"nl": "Gevoeligheid"
+				},
+				"value": 6,
+				"hint": {
+					"en": "Sensitivity level of the sensor.",
+					"nl": "Gevoeligheid van de sensor."
+				    },
+				"attr": {
+					"min": 1,
+					"max": 10
+				}
+			},
+			{
+				"id": "re-trigger_interval",
+				"type": "number",
+				"label": {
+					"en": "Re-trigger interval (s)",
+              		"nl": "Tijd voor opnieuw verzenden (s)"
+				},
+				    "value": 180,
+				    "hint": {
+						"en": "The configuration parameter that can be used to adjust the interval of being re-triggered after the detector has been triggered. No response will be made during this interval if a movement is presented. The time interval can be set between 5 secs to 3600 secs.",
+					    "nl": "Deze waarde kan gebruikt worden om de interval voor opnieuw verzenden van beweging. Geen melding zal gedaan worden tijdens deze periode als er beweging is. De tijd kan ingesteld worden tussen 5 en 3600 seconden."
+				},
+				"attr": {
+					"min": 5,
+					"max": 3600
+				}
+			},
+			{
+				"id": "lux_level",
+				"type": "number",
+				"label": {
+					"en": "Light level threshold (%)",
+              		"nl": "Drempelwaarde lichtsterkte (%)"
+				},
+				    "value": 10,
+				    "hint": {
+						"en": "A detecting percentage of lux level which determines when the motion sensor will be activated. If percentage of lux level of ambient illumination falls below this percentage, and a person moves across or within the protected area, the detector will emit that there is a motion detected to the controller and activate connected modules and lighting. Percentage can be set between 1% to 100%.",
+					    "nl": "Minimale percentage lux (lichtsterkte) welke bepaald wanneer the bewegingssensor wordt geactiveerd. Als het percentage van de omgevingslichtsterkte beneden dit percentage valt, en er beweegt een persoon binnen of door het beschermde gebied, zal de detector beweging melden aan de controller en verbonden modules en lampen inschakelen. Het percentage kan ingesteld worden tussen 1% en 100%."
+				},
+				"attr": {
+					"min": 1,
+					"max": 100
+				}
+			},
+			{
+				"id": "on_off_duration",
+				"type": "number",
+				"label": {
+					"en": "On-off duration (s)",
+              		"nl": "Aan-uit duur (s)"
+				},
+				    "value": 15,
+				    "hint": {
+						"en": "On-off duration setting will be useful if the detector is connected to a module or lighting. The duration determines how long the module/lighting should stay ON. Default setting will turn off the module/light after 15 seconds, after it has been turned on. This parameter can be configured with the value of 5 through 3600, where 5 means 5 second delay and 3600 for 3600 seconds (1 hour) delay.",
+					    "nl": "Aan-uit duur instelling is handig als de bewegingsmelder verbonden is met een module of lamp. De tijdsduur bepaald hoe lang de module/lamp ingeschakeld moet blijven. Standaard instelling zal de module/lamp na 15 seconden uitschakelen, nadat het is ingeschakeld. Deze parameter kan geconfigureerd worden met een waarde tussen 5 en 3600 waar 5 staat voor 5 seconden en 3600 voor 3600 seconden (1 uur) vertraging."
+				},
+				"attr": {
+					"min": 1,
+					"max": 3600
+				}
+			}
+		]
+		},
       {
       "id": "ST-814",
       "name": {
