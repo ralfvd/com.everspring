@@ -3,12 +3,12 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.0.2",
+    "version": "0.0.3",
     "compatibility": ">=0.9.0",
     "description": {
 	    "en": "Everspring"
     },
-    "category": [ "climate", "security" ],
+    "category": [ "climate", "security", "appliances", "lights" ],
     "images": {
 	    "large": "/assets/images/large.jpg",
 	    "small": "/assets/images/small.jpg"
@@ -22,11 +22,209 @@
             {
 								"name": "Robin van Kekem",
 								"email": "nl.inversion@gmail.com"
+            },
+            {
+                "name": "Alexander",
+                "email": "vdhooft@gmail.nl"
             }
         ]
 		},
   "drivers": [
-  	{
+    {
+			"id": "AN180",
+			"name": {
+				"en": "AN180 EVERSPRING Wall Plug"
+			},
+			"zwave": {
+				"manufacturerId": 96,
+				"productTypeId": 4,
+				"productId": 7,
+				"learnmode": {
+					"image": "/drivers/AN180/assets/learnmode.svg",
+					"instruction": {
+						"en": "Press the link key three times within 1.5 seconds to put the unit into inclusion mode.",
+						"nl": "Klik de link knop 3 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+					}
+				},
+				"associationGroups": [ 1 ]
+			},
+			"class": "socket",
+			"capabilities": [
+				"onoff"
+			],
+			"images": {
+				"large": "/drivers/AN180/assets/images/large.jpg",
+				"small": "/drivers/AN180/assets/images/small.jpg"
+			},
+			"settings": [
+				{
+					"id": "meter_report_interval",
+					"type": "number",
+					"attr": {
+						"min": 3,
+						"max": 25
+					},
+					"value": 3,
+					"label": {
+						"en": "Meter Report Interval (s)",
+						"nl": "Meter Report Interval (s)"
+					},
+					"hint": {
+						"en": "The amount of seconds between a Meter Report being send to controller.",
+						"nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
+					}
+				},
+				{
+				    "id": "remember_state",
+				    "type": "checkbox",
+				    "label": {
+					    "en": "Return to last known state after power loss",
+						"nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+				    },
+				    "value": true,
+				    "hint": {
+					    "en": "After power loss the state of the relay will switch to last known.",
+						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+				    }
+			    }
+
+			]
+		},
+		  {
+			"id": "AN181",
+			"name": {
+				"en": "AN181 EVERSPRING Wall Plug"
+			},
+			"zwave": {
+				"manufacturerId": 96,
+				"productTypeId": 4,
+				"productId": 6,
+				"learnmode": {
+					"image": "/drivers/AN181/assets/learnmode.svg",
+					"instruction": {
+						"en": "Press the link key three times within 1.5 seconds to put the unit into inclusion mode.",
+						"nl": "Klik de link knop 3 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+					}
+				},
+				"associationGroups": [ 1 ]
+			},
+			"class": "socket",
+			"capabilities": [
+				"onoff",
+				"measure_power"
+			],
+			"images": {
+				"large": "/drivers/AN181/assets/images/large.jpg",
+				"small": "/drivers/AN181/assets/images/small.jpg"
+			},
+			"settings": [
+				{
+					"id": "meter_report_interval",
+					"type": "number",
+					"attr": {
+						"min": 3,
+						"max": 25
+					},
+					"value": 3,
+					"label": {
+						"en": "Meter Report Interval (s)",
+						"nl": "Meter Report Interval (s)"
+					},
+					"hint": {
+						"en": "The amount of seconds between a Meter Report being send to controller.",
+						"nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
+					}
+				},
+				{
+				    "id": "remember_state",
+				    "type": "checkbox",
+				    "label": {
+					    "en": "Return to last known state after power loss",
+						"nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+				    },
+				    "value": true,
+				    "hint": {
+					    "en": "After power loss the state of the relay will switch to last known.",
+						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+				    }
+			    }
+
+			]
+		},
+		  {
+			"id": "AD147",
+			"name": {
+				"en": "AD147 EVERSPRING Wall Plug"
+			},
+			"zwave": {
+				"manufacturerId": 96,
+				"productTypeId": 3,
+				"productId": 3,
+				"learnmode": {
+					"image": "/drivers/AD147/assets/learnmode.svg",
+					"instruction": {
+						"en": "Press the link key three times within 1.5 seconds to put the unit into inclusion mode.",
+						"nl": "Klik de link knop 3 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+					}
+				},
+				"associationGroups": [ 1 ]
+			},
+			"class": "socket",
+			"capabilities": [
+				"dim",
+				"onoff"
+			],
+			"images": {
+				"large": "/drivers/AD147/assets/images/large.jpg",
+				"small": "/drivers/AD147/assets/images/small.jpg"
+			},
+			"settings": [
+				{
+					"id": "meter_report_interval",
+					"type": "number",
+					"attr": {
+						"min": 3,
+						"max": 25
+					},
+					"value": 3,
+					"label": {
+						"en": "Meter Report Interval (s)",
+						"nl": "Meter Report Interval (s)"
+					},
+					"hint": {
+						"en": "The amount of seconds between a Meter Report being send to controller.",
+						"nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
+					}
+				},
+				{
+				    "id": "remember_state",
+				    "type": "checkbox",
+				    "label": {
+					    "en": "Return to last known state after power loss",
+						"nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+				    },
+				    "value": true,
+				    "hint": {
+					    "en": "After power loss the state of the relay will switch to last known.",
+						"nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+				    }
+			    },
+				{
+				    "id": "dimming_onoff",
+				    "type": "checkbox",
+				    "label": {
+					    "en": "Dimming of on/off functionality",
+						"nl": "Dimming of aan/uit functionaliteit"
+				    },
+				    "value": false,
+				    "hint": {
+					    "en": "When set to 1, the operation mode is not changed; only the light will be 100% immediately.",
+						"nl": "Als gezet wordt de mode niet aangepast, alleen zal de dimmer direct op 100% staan"
+				    }
+			    }
+			]
+		},
+    {
 		    "id": "HSP02",
 		    "name": {
 			    "en": "Everspring HSP02",
