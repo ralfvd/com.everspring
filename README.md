@@ -4,8 +4,11 @@ This app adds support for Everspring devices.
 
 Supported devices:
 
-- Everspring ST-814 ( Temperature & Humidity sensor )
+- Everspring ST814 ( Temperature & Humidity sensor )
 - Everspring HSP02 ( PIR motion sensor )
+- Everspring AD147 ( Dimmer plug )
+- Everspring AN180 ( On/Off plug )
+- Everspring AN181 ( On/Off plug with power metering)
 
 ### Settings
 
@@ -61,7 +64,7 @@ If you like the app, consider a donation to support development
 
 ### Known bugs
 
-None
+- ST814 sensor doesn't always work as expected. Debugging ongoing to get it more reliable
 
 ### Unknown bugs
 
