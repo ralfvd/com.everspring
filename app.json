@@ -29,8 +29,8 @@
   	{
 		    "id": "HSP02",
 		    "name": {
-			    "en": "Motion detector",
-          "nl": "Bewegingsmelder"
+			    "en": "Everspring HSP02",
+          "nl": "Everspring HSP02"
 		    },
 		    "zwave": {
 			    "manufacturerId": 278,
