@@ -72,6 +72,7 @@ Yes ;-)
 
 ### Changelog
 
+- V0.0.3 2016-10-04 : Add support for various powerplugs (Alexander)
 - V0.0.2 2016-08-12 : Add support for HSP02 motion sensor (Robin van Kekem)
 - V0.0.1 2016-08-02 : First test release on Github
 
