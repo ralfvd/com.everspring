@@ -9,6 +9,7 @@ Supported devices:
 - Everspring AD147 ( Dimmer plug )
 - Everspring AN180 ( On/Off plug )
 - Everspring AN181 ( On/Off plug with power metering)
+- Everspring AD1422 ( Dimmer plug )
 
 ### Settings
 
@@ -72,6 +73,7 @@ Yes ;-)
 
 ### Changelog
 
+- V0.1.0 2016-10-21 : Add support for AD1422
 - V0.0.3 2016-10-04 : Add support for various powerplugs (Alexander)
 - V0.0.2 2016-08-12 : Add support for HSP02 motion sensor (Robin van Kekem)
 - V0.0.1 2016-08-02 : First test release on Github
