@@ -7,52 +7,10 @@ Supported devices:
 - Everspring ST814 ( Temperature & Humidity sensor )
 - Everspring HSP02 ( PIR motion sensor )
 - Everspring AD147 ( Dimmer plug )
+- Everspring AN158 ( On/Off plug with power metering)
 - Everspring AN180 ( On/Off plug )
 - Everspring AN181 ( On/Off plug with power metering)
 - Everspring AD1422 ( Dimmer plug )
-
-### Settings
-
-Everspring ST-814:
-You can change settings in the device card. Please refer to the manual for all specific settings.
-Most important ones:
-- Report time interval: will send a report to Homey, even if there was no threshold passed. In minutes.
-- Report temperature change: will send a report to Homey, when temperature changes more than set.
-- Report humidity change: will send a report to Homey, when humidity changes more than set.
-
-These will trigger Flows and entries in Insight
-
-### Flow support
-
-*Triggers*
-Everspring ST-814
-- When temperature changes: triggers a flow when temperature changes
-- When humidity changes: triggers a flow when humidity changes
-- When battery changes: triggers a flow when battery level changes
-
-Everspring HSP02
-- When motion detected: triggers a flow when motion is detected
-- When motion detection ends: triggers a flow when motion detection ends
-
-*Conditions*
-
-Everspring ST-814
-- No conditions defined at this moment
-
-Everspring HSP02
-- No conditions defined at this moment
-
-*Actions*
-
-Everspring ST-814
-- No actions defined
-
-Everspring HSP02
-- No actions defined
-
-### Speech
-
-No speech support
 
 ### Donate
 
@@ -65,6 +23,7 @@ If you like the app, consider a donation to support development
 
 ### Known bugs
 
+- Setting dimmer values in a flow will result in light to be turned on 100 %. Non-app bug, should be fixed by Homey FW.
 - ST814 sensor doesn't always work as expected. Debugging ongoing to get it more reliable
 
 ### Unknown bugs
@@ -73,6 +32,7 @@ Yes ;-)
 
 ### Changelog
 
+- V0.1.1 2016-12-12 : Add support for AN158 ; update Zwave driver ( AN158 on loan provided by Robbshop )
 - V0.1.0 2016-10-21 : Add support for AD1422
 - V0.0.3 2016-10-04 : Add support for various powerplugs (Alexander)
 - V0.0.2 2016-08-12 : Add support for HSP02 motion sensor (Robin van Kekem)

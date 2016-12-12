@@ -3,7 +3,7 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.1.0",
+    "version": "0.1.1",
     "compatibility": ">=0.9.0",
     "description": {
 	    "en": "Everspring"
@@ -151,6 +151,72 @@
 
 			]
 		},
+    {
+    "id": "AN158",
+    "name": {
+      "en": "AN158 EVERSPRING Wall Plug"
+    },
+    "zwave": {
+      "manufacturerId": 96,
+      "productTypeId": 4,
+      "productId": 2,
+      "learnmode": {
+        "image": "/drivers/AN158/assets/learnmode.svg",
+        "instruction": {
+          "en": "Make sure device is off, then press the link key three times within 1.5 seconds.",
+          "nl": "Zorg dat device af staat, dan druk 3 keer op de link knop binnen 1.5 sec."
+        }
+      },
+      "associationGroups": [ 1 ]
+    },
+    "class": "socket",
+    "capabilities": [
+      "onoff",
+      "measure_power"
+    ],
+    "images": {
+      "large": "/drivers/AN158/assets/images/large.jpg",
+      "small": "/drivers/AN158/assets/images/small.jpg"
+    },
+    "settings": [
+      {
+        "id": "meter_report_interval",
+        "type": "number",
+        "attr": {
+          "min": 0,
+          "max": 3240
+        },
+        "value": 3,
+        "label": {
+          "en": "Meter Report Interval (10s)",
+          "nl": "Meter Report Interval (10s)"
+        },
+        "hint": {
+          "en": "The amount of seconds (times 10: e.g. 3 = 30s) between a Meter Report being send to controller.",
+          "nl": "De tijd in seconden (x 10: bv 3 = 30s) tussen de Meter rapportages die naar de controller worden verzonden."
+        }
+      },
+      {
+        "id": "meter_kwh_report_interval",
+        "type": "number",
+        "attr": {
+          "min": 0,
+          "max": 10080
+        },
+        "value": 1440,
+        "label": {
+          "en": "Meter kWh Report Interval (min)",
+          "nl": "Meter kWh Rapport Interval (m)"
+        },
+        "hint": {
+          "en": "The amount of minutes between a kWh Meter Report being send to controller.",
+          "nl": "De tijd in minuten tussen de kWh rapportages die naar de controller worden verzonden."
+        }
+      }
+
+
+    ]
+  },
 		  {
 			"id": "AD147",
 			"name": {
