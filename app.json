@@ -178,7 +178,7 @@
       "large": "/drivers/AN158/assets/images/large.jpg",
       "small": "/drivers/AN158/assets/images/small.jpg"
     },
-    "settings": [
+      "settings": [
       {
         "id": "meter_report_interval",
         "type": "number",
