@@ -3,7 +3,7 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.1.2",
+    "version": "0.1.3",
     "compatibility": ">=0.9.0",
     "description": {
 	    "en": "Everspring"
@@ -570,6 +570,70 @@
 				           },
                    "attr": {
 					            "min": 0,
+					            "max": 127
+				           }
+			       }
+      ]
+		},
+    {
+		    "id": "SP814",
+		    "name": {
+			    "en": "SP814 Motion sensor",
+          "nl": "SP814 Motion sensor"
+		    },
+		    "zwave": {
+			    "manufacturerId": 96,
+			    "productTypeId": 1,
+			    "productId": 2,
+			    "learnmode": {
+				    "image": "/drivers/SP814/assets/learnmode.svg",
+				    "instruction": {
+					    "en": "Press the inclusion link (marked 5) 3 times behind the battery cover",
+					    "nl": "Druk 3-maal op de knop (nummer 5) achter de batterij klep"
+				    }
+				},
+			    "associationGroups": [ 1 ]
+		    },
+		    "class": "sensor",
+		    "capabilities": [
+          "alarm_motion"
+        ],
+		    "images": {
+			    "large": "/drivers/SP814/assets/images/large.jpg",
+			    "small": "/drivers/SP814/assets/images/small.jpg"
+		    },
+        "settings": [
+			       {
+				           "id": "sensitivity_level",
+				           "type": "number",
+				           "label": {
+            					"en": "Sensitivity level",
+            					"nl": "Gevoeligheidsniveau"
+            			 },
+				           "value": 6,
+				           "hint": {
+					            "en": "1 Means lowest sensitivity and 10 means highest.",
+					            "nl": "1 Is laagste gevoeligheid, 10 hoogste."
+				           },
+                   "attr": {
+					            "min": 1,
+					            "max": 10
+				           }
+			       },
+             {
+				           "id": "on_off_duration",
+				           "type": "number",
+				           "label": {
+            					"en": "On-off duration (s)",
+            					"nl": "Aan-uit duur (s)"
+            			 },
+				           "value": 5,
+				           "hint": {
+					            "en": "How long before device sends Off after being triggered",
+					            "nl": "Vertraging voordat 'Uit' commando verstuurd wordt"
+				           },
+                   "attr": {
+					            "min": 5,
 					            "max": 127
 				           }
 			       }

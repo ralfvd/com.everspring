@@ -35,6 +35,7 @@ Yes ;-)
 ### Changelog
 
 
+- V0.1.3 2016-12-13 : Add support for SP814 ; ( SP814 on loan provided by Robbshop )
 - V0.1.2 2016-12-13 : Add support for SP103 ; ( SP103 on loan provided by Robbshop )
 - V0.1.1 2016-12-12 : Add support for AN158 ; update Zwave driver ( AN158 on loan provided by Robbshop )
 - V0.1.0 2016-10-21 : Add support for AD1422
