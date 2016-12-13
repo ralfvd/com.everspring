@@ -4,13 +4,14 @@ This app adds support for Everspring devices.
 
 Supported devices:
 
-- Everspring ST814 ( Temperature & Humidity sensor )
-- Everspring HSP02 ( PIR motion sensor )
 - Everspring AD147 ( Dimmer plug )
+- Everspring AD1422 ( Dimmer plug )
 - Everspring AN158 ( On/Off plug with power metering)
 - Everspring AN180 ( On/Off plug )
 - Everspring AN181 ( On/Off plug with power metering)
-- Everspring AD1422 ( Dimmer plug )
+- Everspring HSP02 ( PIR motion sensor )
+- Everspring SP103 ( PIR motion sensor )
+- Everspring ST814 ( Temperature & Humidity sensor )
 
 ### Donate
 
@@ -23,7 +24,8 @@ If you like the app, consider a donation to support development
 
 ### Known bugs
 
-- Setting dimmer values in a flow will result in light to be turned on 100 %. Non-app bug, should be fixed by Homey FW.
+- SP103 : Tamper alarm doesn't work yet
+- Dimmer plugs: Setting dimmer values in a flow will result in light to be turned on 100 %. Non-app bug, should be fixed by Homey FW.
 - ST814 sensor doesn't always work as expected. Debugging ongoing to get it more reliable
 
 ### Unknown bugs
@@ -32,6 +34,8 @@ Yes ;-)
 
 ### Changelog
 
+
+- V0.1.2 2016-12-13 : Add support for SP103 ; ( SP103 on loan provided by Robbshop )
 - V0.1.1 2016-12-12 : Add support for AN158 ; update Zwave driver ( AN158 on loan provided by Robbshop )
 - V0.1.0 2016-10-21 : Add support for AD1422
 - V0.0.3 2016-10-04 : Add support for various powerplugs (Alexander)

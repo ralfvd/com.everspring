@@ -3,7 +3,7 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.1.1",
+    "version": "0.1.2",
     "compatibility": ">=0.9.0",
     "description": {
 	    "en": "Everspring"
@@ -184,7 +184,7 @@
         "type": "number",
         "attr": {
           "min": 0,
-          "max": 3240
+          "max": 255
         },
         "value": 3,
         "label": {
@@ -526,6 +526,54 @@
 				}
 			}
 		]
+		},
+    {
+		    "id": "SP103",
+		    "name": {
+			    "en": "SP103 Motion sensor",
+          "nl": "SP103 Motion sensor"
+		    },
+		    "zwave": {
+			    "manufacturerId": 96,
+			    "productTypeId": 257,
+			    "productId": 1,
+			    "learnmode": {
+				    "image": "/drivers/SP103/assets/learnmode.svg",
+				    "instruction": {
+					    "en": "Click the tamper switch behind the battery cover",
+					    "nl": "Druk op de tamper knop achter de batterij klep"
+				    }
+				},
+			    "associationGroups": [ 1 ]
+		    },
+		    "class": "sensor",
+		    "capabilities": [
+          "alarm_motion",
+          "alarm_tamper"
+        ],
+		    "images": {
+			    "large": "/drivers/SP103/assets/images/large.jpg",
+			    "small": "/drivers/SP103/assets/images/small.jpg"
+		    },
+        "settings": [
+			       {
+				           "id": "phase_on",
+				           "type": "number",
+				           "label": {
+            					"en": "Phase on level",
+            					"nl": "Phase on level"
+            			 },
+				           "value": 99,
+				           "hint": {
+					            "en": "Phase on level command",
+					            "nl": "Phase on level command"
+				           },
+                   "attr": {
+					            "min": 0,
+					            "max": 127
+				           }
+			       }
+      ]
 		},
       {
       "id": "ST-814",
