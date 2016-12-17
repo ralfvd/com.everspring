@@ -21,7 +21,8 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 		  'command_report': 'SWITCH_MULTILEVEL_REPORT',
 		  'command_report_parser': function(report) {
 			return report['Value (Raw)'][0] > 0;
-		  }
+		},
+		'pollInterval': "poll_interval"
 		},
 		'dim': {
 		  'command_class': 'COMMAND_CLASS_SWITCH_MULTILEVEL',
@@ -39,22 +40,5 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			return value / 100;
 		  }
 		}
-	  },
-
-	    settings: {
-				"remember_state": {
-                "index": 3,
-                "size": 1,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
-                  }
-                },
-				"dimming_onoff": {
-                "index": 4,
-                "size": 1,
-                "parser": function( input ) {
-                return new Buffer([ parseInt(input) ]);
-                  }
-                }
-              }
+	  }
 })

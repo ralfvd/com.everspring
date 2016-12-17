@@ -3,7 +3,7 @@
 const path			= require('path');
 const ZwaveDriver	= require('homey-zwavedriver');
 
-//
+// http://www.pepper1.net/zwavedb/device/601
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
 	debug: true,
@@ -47,9 +47,29 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 
 	},
 	settings: {
-		"phase_on": {
+		"basic_set_level": {
 			"index": 1,
 			"size": 1
+		},
+		"enable_disable_sensor_detection": {
+			"index": 2,
+			"size": 1
+		},
+		"sensitivity_level": {
+			"index": 3,
+			"size": 1
+		},
+		"re-trigger_interval": {
+			"index": 4,
+			"size": 2
+		},
+		"lux_level": {
+			"index": 5,
+			"size": 1
+		},
+		"on_off_duration": {
+			"index": 6,
+			"size": 2
 		}
 	}
 })

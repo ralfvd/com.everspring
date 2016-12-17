@@ -6,7 +6,7 @@ const ZwaveDriver	= require('homey-zwavedriver');
 // SP103
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
-	debug: true,
+	debug: false,
 	capabilities: {
 
 		'alarm_motion': {
@@ -23,7 +23,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'command_report'			: 'ALARM_REPORT',
 			'command_report_parser'		: function( report ){
 				Homey.log('[EVR DEBUG] alarm_tamper report:', report);
-				return report['Alarm level'] > 0;
+				return report['Alarm Type (Raw)'] > 0;
 			}
 		},
 
@@ -40,29 +40,9 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 
 	},
 	settings: {
-		"basic_set_level": {
+		"phase_on": {
 			"index": 1,
 			"size": 1
-		},
-		"enable_disable_sensor_detection": {
-			"index": 2,
-			"size": 1
-		},
-		"sensitivity_level": {
-			"index": 3,
-			"size": 1
-		},
-		"re-trigger_interval": {
-			"index": 4,
-			"size": 2
-		},
-		"lux_level": {
-			"index": 5,
-			"size": 1
-		},
-		"on_off_duration": {
-			"index": 6,
-			"size": 2
 		}
 	}
 })

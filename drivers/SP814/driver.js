@@ -3,10 +3,10 @@
 const path			= require('path');
 const ZwaveDriver	= require('homey-zwavedriver');
 
-// SP103
+// SP814
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
-	debug: true,
+	debug: false,
 	capabilities: {
 
 		'alarm_motion': {
