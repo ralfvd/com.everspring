@@ -23,7 +23,8 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'command_report'			: 'ALARM_REPORT',
 			'command_report_parser'		: function( report ){
 				Homey.log('[EVR DEBUG] alarm_tamper report:', report);
-				return report['Alarm Type (Raw)'] > 0;
+				return 'alarm';
+
 			}
 		},
 
