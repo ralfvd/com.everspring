@@ -3,7 +3,7 @@
 const path			= require('path');
 const ZwaveDriver	= require('homey-zwavedriver');
 
-// http://www.pepper1.net/zwavedb/device/687 <- incorrect link
+// http://products.z-wavealliance.org/products/275
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
 	debug: false,
@@ -14,8 +14,8 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 		  'command_set': 'SWITCH_MULTILEVEL_SET',
 		  'command_set_parser': function(value) {
 			return {
-			  'Value': value ? 99 : 0,
-			  "Dimming Duration": 1
+					'Value': (value > 0) ? 'on/enable' : 'off/disable',
+				  "Dimming Duration": 1
 			}
 		  },
 		  'command_report': 'SWITCH_MULTILEVEL_REPORT',

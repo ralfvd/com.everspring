@@ -27,9 +27,9 @@ If you like the app, consider a donation to support development
 ### Known bugs/limitations
 
 - [Fixed in 0.1.5] Dimmer plugs: Setting dimmer values in a flow will result in light to be turned on 100 %. Non-app bug, should be fixed by Homey FW.
-- AD1422 : Current state (on/off) isn't always correct when using dimming in device card; non-app bug, should be fixed by Homey FW
-- AD1422 : Local button for on/off isn't sent back to Homey  
-- SP103 : Tamper alarm doesn't work yet
+- [Fixed in 0.1.6] AD1422 : Current state (on/off) isn't always correct when using dimming in device card; non-app bug, should be fixed by Homey FW
+- [Fixed in 0.1.6 by polling] AD1422 : Local button for on/off isn't sent back to Homey  
+- [Removed in 0.1.6] SP103 : Tamper alarm will not work
 - ST814 sensor doesn't always work as expected. Debugging ongoing to get it more reliable
 
 ### Unknown bugs
@@ -38,7 +38,7 @@ Yes ;-)
 
 ### Changelog
 
-
+- V0.1.6 2016-01-08 : Various fixes and cleanup. 
 - V0.1.5 2016-01-07 : AD147 dimmer settings in flow now working
 - V0.1.4 2016-12-14 : AD1422 configuration settings removed ( not available ), bugfixes
 - V0.1.3 2016-12-13 : Add support for SP814 ; ( SP814 on loan provided by Robbshop )

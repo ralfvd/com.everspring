@@ -3,7 +3,7 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.1.5",
+    "version": "0.1.6",
     "compatibility": ">=0.9.0",
     "description": {
 	    "en": "Everspring"
@@ -195,26 +195,7 @@
           "en": "The amount of seconds (times 10: e.g. 3 = 30s) between a Meter Report being send to controller.",
           "nl": "De tijd in seconden (x 10: bv 3 = 30s) tussen de Meter rapportages die naar de controller worden verzonden."
         }
-      },
-      {
-        "id": "meter_kwh_report_interval",
-        "type": "number",
-        "attr": {
-          "min": 0,
-          "max": 10080
-        },
-        "value": 1440,
-        "label": {
-          "en": "Meter kWh Report Interval (min)",
-          "nl": "Meter kWh Rapport Interval (m)"
-        },
-        "hint": {
-          "en": "The amount of minutes between a kWh Meter Report being send to controller.",
-          "nl": "De tijd in minuten tussen de kWh rapportages die naar de controller worden verzonden."
-        }
       }
-
-
     ]
   },
 		  {
@@ -331,8 +312,8 @@
 						"nl": "Poll Interval"
 					},
 					"hint": {
-						"en": "The amount of seconds between asking the device for a status update.",
-						"nl": "Aantal seconden tussen het opvragen van een status update aan het apparaat."
+						"en": "The amount of seconds between asking the device for a status update (60-3600 s).",
+						"nl": "Aantal seconden tussen het opvragen van een status update aan het apparaat (60-3600 s)."
 					}
 				}
       ]
@@ -540,7 +521,6 @@
 		    "class": "sensor",
 		    "capabilities": [
           "alarm_motion",
-          "alarm_tamper",
           "measure_battery"
         ],
 		    "images": {

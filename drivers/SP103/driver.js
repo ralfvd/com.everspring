@@ -18,15 +18,21 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			}
 		},
 
-		'alarm_tamper': {
-			'command_class'				: 'COMMAND_CLASS_ALARM',
-			'command_report'			: 'ALARM_REPORT',
-			'command_report_parser'		: function( report ){
-				Homey.log('[EVR DEBUG] alarm_tamper report:', report);
-				return 'alarm';
-
-			}
-		},
+//		'alarm_tamper': {
+//			'command_class'				: 'COMMAND_CLASS_ALARM',
+//			'command_get'				: 'ALARM_GET',
+//			'command_get_parser'		: function(){
+//				return {
+//					'Alarm Type': 1
+//				}
+//			},
+//			'command_report'			: 'ALARM_REPORT',
+//			'command_report_parser'		: function( report ){
+//				Homey.log('[EVR DEBUG] alarm_tamper report:', report);
+//				return report['Sensor State'] === 'alarm';
+//	Deze return report werkt ook nog niet; geeft geen tamper alarm door aan Homey
+//			}
+//		},
 
 		'measure_battery': {
 			'command_class'				: 'COMMAND_CLASS_BATTERY',
