@@ -3,7 +3,7 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.1.6",
+    "version": "0.1.7",
     "compatibility": ">=0.9.0",
     "description": {
 	    "en": "Everspring"
@@ -151,6 +151,36 @@
 
 			]
 		},
+    {
+    "id": "AN157",
+    "name": {
+      "en": "AN157 EVERSPRING Wall Plug"
+    },
+    "zwave": {
+      "manufacturerId": 96,
+      "productTypeId": 4,
+      "productId": 1,
+      "learnmode": {
+        "image": "/drivers/AN157/assets/learnmode.svg",
+        "instruction": {
+          "en": "Make sure device is off, then press the link key three times within 1.5 seconds.",
+          "nl": "Zorg dat device af staat, dan druk 3 keer op de link knop binnen 1.5 sec."
+        }
+      },
+      "associationGroups": [ 1 ]
+    },
+    "class": "socket",
+    "capabilities": [
+      "onoff"
+    ],
+    "images": {
+      "large": "/drivers/AN157/assets/images/large.jpg",
+      "small": "/drivers/AN157/assets/images/small.jpg"
+    }
+    },
+
+
+
     {
     "id": "AN158",
     "name": {

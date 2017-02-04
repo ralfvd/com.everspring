@@ -6,6 +6,7 @@ Supported devices:
 
 - Everspring AD147 ( Dimmer plug )
 - Everspring AD142(2) ( Dimmer plug )
+- Everspring AN157 ( On/Off plug [ experimental ])
 - Everspring AN158 ( On/Off plug with power metering)
 - Everspring AN180 ( On/Off plug )
 - Everspring AN181 ( On/Off plug with power metering)
@@ -38,8 +39,9 @@ Yes ;-)
 
 ### Changelog
 
-- V0.1.6 2017-01-13 : Add battery level (repair needed)
-- V0.1.6 2017-01-08 : Various fixes and cleanup. 
+- V0.1.7 2017-02-04 : Add AN157, inclusion of updated zwave driver
+- V0.1.6 2017-01-13 : Add HSP02 battery level (repair needed)
+- V0.1.6 2017-01-08 : Various fixes and cleanup.
 - V0.1.5 2017-01-07 : AD147 dimmer settings in flow now working
 - V0.1.4 2016-12-14 : AD1422 configuration settings removed ( not available ), bugfixes
 - V0.1.3 2016-12-13 : Add support for SP814 ; ( SP814 on loan provided by Robbshop )
