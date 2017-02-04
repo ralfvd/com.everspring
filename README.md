@@ -38,8 +38,9 @@ Yes ;-)
 
 ### Changelog
 
-- V0.1.6 2016-01-08 : Various fixes and cleanup. 
-- V0.1.5 2016-01-07 : AD147 dimmer settings in flow now working
+- V0.1.6 2017-01-13 : Add battery level (repair needed)
+- V0.1.6 2017-01-08 : Various fixes and cleanup. 
+- V0.1.5 2017-01-07 : AD147 dimmer settings in flow now working
 - V0.1.4 2016-12-14 : AD1422 configuration settings removed ( not available ), bugfixes
 - V0.1.3 2016-12-13 : Add support for SP814 ; ( SP814 on loan provided by Robbshop )
 - V0.1.2 2016-12-13 : Add support for SP103 ; ( SP103 on loan provided by Robbshop )
