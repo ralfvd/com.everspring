@@ -39,7 +39,7 @@ Yes ;-)
 
 ### Changelog
 
-- V0.1.7 2017-02-04 : Add AN157, inclusion of updated zwave driver
+- V0.1.7 2017-03-12 : Add AN157, inclusion of updated zwave driver
 - V0.1.6 2017-01-13 : Add HSP02 battery level (repair needed)
 - V0.1.6 2017-01-08 : Various fixes and cleanup.
 - V0.1.5 2017-01-07 : AD147 dimmer settings in flow now working
