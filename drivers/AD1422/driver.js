@@ -20,7 +20,8 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 		  },
 		  'command_report': 'SWITCH_MULTILEVEL_REPORT',
 		  'command_report_parser': function(report) {
-			if (typeof report['Value (Raw)'][0] !== 'undefined') {
+		if (report.hasOwnProperty('Value (Raw)')) {
+	//	if (typeof report['Value (Raw)'][0] !== 'undefined') {
 				return report['Value (Raw)'][0] > 0;
 			}
 		},
@@ -38,7 +39,8 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 		  },
 		  'command_report': 'SWITCH_MULTILEVEL_REPORT',
 		  'command_report_parser': function(report) {
-				if (typeof report['Value (Raw)'][0] !== 'undefined') {
+			if (report.hasOwnProperties('Value (Raw)')) {
+	//			if (typeof report['Value (Raw)'][0] !== 'undefined') {
 					let value = report['Value (Raw)'][0];
 					return value / 100;
 				}

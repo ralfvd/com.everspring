@@ -39,6 +39,7 @@ Yes ;-)
 
 ### Changelog
 
+- V0.1.8 2017-03-22 : Bugfixes mainly for AD1422 & SP103 crashes
 - V0.1.7 2017-03-12 : Add AN157, inclusion of updated zwave driver
 - V0.1.6 2017-01-13 : Add HSP02 battery level (repair needed)
 - V0.1.6 2017-01-08 : Various fixes and cleanup.
