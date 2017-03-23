@@ -39,7 +39,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 		  },
 		  'command_report': 'SWITCH_MULTILEVEL_REPORT',
 		  'command_report_parser': function(report) {
-			if (report.hasOwnProperties('Value (Raw)')) {
+			if (report.hasOwnProperty('Value (Raw)')) {
 	//			if (typeof report['Value (Raw)'][0] !== 'undefined') {
 					let value = report['Value (Raw)'][0];
 					return value / 100;

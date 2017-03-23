@@ -14,7 +14,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'command_report'			: 'BASIC_SET',
 			'command_report_parser'		: function( report ){
 				Homey.log('[EVR DEBUG] alarm_motion report:', report);
-				if (report.hasOwnProperties('Value Raw)')) {
+				if (report.hasOwnProperty('Value Raw)')) {
 				// if (typeof report['Value (Raw)'][0] !== 'undefined') {
 					return report['Value (Raw)'][0] > 0;
 				}
@@ -42,7 +42,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			'command_get'				: 'BATTERY_GET',
 			'command_report'			: 'BATTERY_REPORT',
 			'command_report_parser'		: function( report ) {
-				if (report.hasOwnProperties('Battery Level (Raw)')) {
+				if (report.hasOwnProperty('Battery Level (Raw)')) {
 			//	if (typeof report['Battery Level (Raw)'][0] !== 'undefined') {
 					Homey.log('[EVR DEBUG] measure_battery report:', report);
 					if( report['Battery Level'] === "battery low warning" ) return 1;
