@@ -6,11 +6,12 @@ Supported devices:
 
 - Everspring AD147 ( Dimmer plug )
 - Everspring AD142(2) ( Dimmer plug )
-- Everspring AN157 ( On/Off plug [ experimental ])
+- Everspring AN157 ( On/Off plug )
 - Everspring AN158 ( On/Off plug with power metering)
 - Everspring AN180 ( On/Off plug )
 - Everspring AN181 ( On/Off plug with power metering)
 - Everspring HSP02 ( PIR motion sensor )
+- Everspring SF812 ( Smoke detector ) [ BETA ]
 - Everspring SP103 ( PIR motion sensor )
 - Everspring ST814 ( Temperature & Humidity sensor )
 
@@ -39,6 +40,7 @@ Yes ;-)
 
 ### Changelog
 
+- V0.2.0 2017-04-23 : SF812 added (code by Rebtor)
 - V0.1.9 2017-03-26 : SP103 bugfix to report motion again
 - V0.1.8 2017-03-22 : Bugfixes mainly for AD1422 & SP103 crashes
 - V0.1.7 2017-03-12 : Add AN157, inclusion of updated zwave driver
@@ -49,7 +51,7 @@ Yes ;-)
 - V0.1.3 2016-12-13 : Add support for SP814 ; ( SP814 on loan provided by Robbshop )
 - V0.1.2 2016-12-13 : Add support for SP103 ; ( SP103 on loan provided by Robbshop )
 - V0.1.1 2016-12-12 : Add support for AN158 ; update Zwave driver ( AN158 on loan provided by Robbshop )
-- V0.1.0 2016-10-21 : Add support for AD1422
+- V0.1.0 2016-10-21 : Add support for AD1422 ; ( AD1422 on loan provided by Rozz )
 - V0.0.3 2016-10-04 : Add support for various powerplugs (Alexander)
 - V0.0.2 2016-08-12 : Add support for HSP02 motion sensor (Robin van Kekem)
 - V0.0.1 2016-08-02 : First test release on Github
