@@ -12,6 +12,7 @@ Supported devices:
 - Everspring AN181 ( On/Off plug with power metering)
 - Everspring HSP02 ( PIR motion sensor )
 - Everspring SF812 ( Smoke detector ) [ BETA ]
+- Everpsring SM103 ( Door/window detector ) [ BETA ]
 - Everspring SP103 ( PIR motion sensor )
 - Everspring ST814 ( Temperature & Humidity sensor )
 
@@ -40,6 +41,7 @@ Yes ;-)
 
 ### Changelog
 
+- V0.2.1 2017-04-06 : SM103 added (code by Rebtor )
 - V0.2.0 2017-04-23 : SF812 added (code by Rebtor)
 - V0.1.9 2017-03-26 : SP103 bugfix to report motion again
 - V0.1.8 2017-03-22 : Bugfixes mainly for AD1422 & SP103 crashes
