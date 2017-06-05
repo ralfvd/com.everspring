@@ -31,6 +31,75 @@
 		},
   "drivers": [
     {
+      "id": "AN179",
+      "name": {
+        "en": "AN179 Everspring In-Wall plug"
+      },
+      "zwave": {
+        "manufacturerId": 96,
+        "productTypeId": 4,
+        "productId": 8,
+        "learnmode": {
+          "image": "/drivers/AN179/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the link key three times within 1.5 seconds to put the unit into inclusion mode.",
+            "nl": "Klik de link knop 3 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+          }
+        },
+        "associationGroups": [ 1 ]
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/AN179/assets/images/large.png",
+        "small": "/drivers/AN179/assets/images/small.png"
+      },
+      "settings": [
+        {
+            "id": "remember_state",
+            "type": "checkbox",
+            "label": {
+              "en": "Return to last known state after power loss",
+            "nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+            },
+            "value": true,
+            "hint": {
+              "en": "After power loss the state of the relay will switch to last known.",
+            "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+            }
+         },
+         {
+            "id": "switching_type",
+               "type": "dropdown",
+               "label": {
+                 "en": "Switch 1 switching type",
+                 "nl": "Schakelaar 1 type"
+               },
+               "value": "0",
+               "values": [
+                 {
+                   "id": "0",
+                   "label": {
+                     "en": "Single Pole Double Throw",
+                     "nl": "Single Pole Double Throw"
+                   }
+                 },
+                 {
+                   "id": "1",
+                   "label": {
+                     "en": "Toggle switch",
+                     "nl": "Toggle switch"
+                   }
+                 }
+
+               ]
+         }
+
+      ]
+    },
+    {
 			"id": "AN180",
 			"name": {
 				"en": "AN180 EVERSPRING Wall Plug"
@@ -178,9 +247,6 @@
       "small": "/drivers/AN157/assets/images/small.jpg"
     }
     },
-
-
-
     {
     "id": "AN158",
     "name": {

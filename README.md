@@ -8,6 +8,7 @@ Supported devices:
 - Everspring AD142(2) ( Dimmer plug )
 - Everspring AN157 ( On/Off plug )
 - Everspring AN158 ( On/Off plug with power metering)
+- Everspring AN179 ( On/Off In-wall plug) [ BETA ]
 - Everspring AN180 ( On/Off plug )
 - Everspring AN181 ( On/Off plug with power metering)
 - Everspring HSP02 ( PIR motion sensor )
