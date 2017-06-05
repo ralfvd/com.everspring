@@ -6,7 +6,7 @@ const ZwaveDriver	= require('homey-zwavedriver');
 // http://www.pepper1.net/zwavedb/device/
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
-	debug: false,
+	debug: true,
 	capabilities: {
 		'onoff': {
 			'command_class'				: 'COMMAND_CLASS_SWITCH_BINARY',
@@ -38,5 +38,5 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
                 return new Buffer([ parseInt(input) ]);
                   }
 				}
-
+   }
 })
