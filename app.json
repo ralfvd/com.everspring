@@ -3,7 +3,7 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.2.1",
+    "version": "0.2.2",
     "compatibility": ">=0.9.0",
     "description": {
 	    "en": "Everspring"
@@ -26,7 +26,7 @@
             {
                 "name": "Alexander",
                 "email": "vdhooft@gmail.nl"
-            }  
+            }
         ]
 		},
   "drivers": [
@@ -361,7 +361,7 @@
 			  "learnmode": {
 				  "image": "/drivers/HSP02/assets/learnmode.svg",
 				  "instruction": {
-					  "en": "Tripple click the little button behind the battery cover",
+					  "en": "Triple click the little button behind the battery cover",
 					  "nl": "Driemaal drukken op de knop achter de batterij klep"
 				  }
 			  },
@@ -683,7 +683,7 @@
 			  "learnmode": {
 				  "image": "/drivers/SM103/assets/learnmode.svg",
 				  "instruction": {
-					  "en": "Tripple click the tamperswitch behind on the back of the sensor",
+					  "en": "Triple click the tamperswitch behind on the back of the sensor",
 					  "nl": "Driemaal drukken op de tamperknop achter achterop de sensor"
 				  }
 			  },
@@ -744,6 +744,58 @@
 			  }
 		  ]
 	  },
+    {
+      "id": "ST812",
+      "name": {
+        "en": "ST812 Everspring Water Alarm",
+        "nl": "ST812 Everspring Water Alarm"
+      },
+      "zwave": {
+        "manufacturerId": 96,
+        "productTypeId": 11,
+        "productId": 1,
+        "learnmode": {
+          "image": "/drivers/ST812/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press link key [5] three times within 1.5 seconds",
+            "nl": "Driemaal drukken op de link knop [5]"
+          }
+        },
+        "associationGroups": [1],
+        "defaultConfiguration": [
+          {
+            "id": "basic_set_level",
+            "size": 1,
+            "value": 99
+          }
+        ]
+      },
+      "class": "sensor",
+      "capabilities": [ "alarm_water", "measure_battery"],
+      "images": {
+        "large": "/drivers/ST812/assets/images/large.png",
+        "small": "/drivers/ST812/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "basic_set_level",
+          "type": "number",
+          "label": {
+            "en": "Basic set level",
+            "nl": "Basis inschakel instelling"
+          },
+          "value": 99,
+          "hint": {
+            "en": "Value to be sent with a BASIC SET command.",
+            "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+          },
+          "attr": {
+            "min": 1,
+            "max": 99
+          }
+        }
+      ]
+    },
       {
       "id": "ST-814",
       "name": {
