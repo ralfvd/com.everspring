@@ -294,6 +294,125 @@
       }
     ]
   },
+  {
+    "id": "AD146",
+    "name": {
+        "en": "AD146 EVERSPRING Wall Plug"
+    },
+    "zwave": {
+        "manufacturerId": 96,
+        "productTypeId": 3,
+        "productId": 2,
+        "learnmode": {
+            "image": "/drivers/AD146/assets/learnmode.svg",
+            "instruction": {
+                "en": "Press the link key three times within 1.5 seconds to put the unit into inclusion mode.",
+                "nl": "Klik de link knop 3 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+            }
+        },
+        "associationGroups": [ 1 ]
+    },
+    "class": "socket",
+    "capabilities": [
+        "dim",
+        "onoff"
+    ],
+    "images": {
+        "large": "/drivers/AD146/assets/images/large.jpg",
+        "small": "/drivers/AD146/assets/images/small.jpg"
+    },
+    "settings": [
+        {
+            "id": "basic_set_value",
+            "type": "number",
+            "attr": {
+                "min": 1,
+                "max": 255
+            },
+            "value": 255,
+            "label": {
+                "en": "Basic Set Command Value",
+                "nl": "Basic Set Command Value"
+            },
+            "hint": {
+                "en": "The value which is sent over Basic Set",
+                "nl": "Translate me"
+            }
+        },
+        {
+            "id": "meter_report_interval",
+            "type": "number",
+            "attr": {
+                "min": 3,
+                "max": 25
+            },
+            "value": 3,
+            "label": {
+                "en": "Meter Report Interval (s)",
+                "nl": "Meter Report Interval (s)"
+            },
+            "hint": {
+                "en": "The amount of seconds between a Meter Report being send to controller.",
+                "nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
+            }
+        },
+        {
+            "id": "remember_state",
+            "type": "checkbox",
+            "label": {
+                "en": "Return to last known state after power loss",
+                "nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+            },
+            "value": true,
+            "hint": {
+                "en": "After power loss the state of the relay will switch to last known.",
+                "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+            }
+        },
+        {
+            "id": "switch_type",
+            "type": "dropdown",
+            "value": 0,
+            "values": [
+                {
+                    "id": "0",
+                    "label": {
+                        "en": "Single Pole Double Throw",
+                        "nl": "Single Pole Double Throw"
+                    }
+                    },
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "Toggle Switch",
+                        "nl": "Toggle Switch"
+                    }
+                    }
+            ],
+            "label": {
+                "en": "Switch type",
+                "nl": "Translate"
+            },
+            "hint": {
+                "en": "Specify which type of switch that is connected to the module.",
+                "nl": "Translate me"
+            }
+        },
+        {
+            "id": "dimming_onoff",
+            "type": "checkbox",
+            "label": {
+                "en": "Dimming of on/off functionality",
+                "nl": "Dimming of aan/uit functionaliteit"
+            },
+            "value": false,
+            "hint": {
+                "en": "When set to 1, the operation mode is not changed; only the light will be 100% immediately.",
+                "nl": "Als gezet wordt de mode niet aangepast, alleen zal de dimmer direct op 100% staan"
+            }
+        }
+    ]
+},
 		  {
 			"id": "AD147",
 			"name": {
