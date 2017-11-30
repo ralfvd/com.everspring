@@ -60,7 +60,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			  "index": 3,
 			  "size": 1,
 			  "parser": function( input ) {
-				  return new Buffer([ parseInt(input) ]);
+				  return new Buffer([ input ? 1 : 0 ]);
 			  }
 		  },
 		  "switch_type": {
