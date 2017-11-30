@@ -67,7 +67,7 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			  "index": 4,
 			  "size": 1,
 			  "parser": function( input ) {
-				  return new Buffer([ parseInt(input) ]);
+				  return new Buffer([ input ? 1 : 0 ]);
 			  }
 		  },
 		  "dimming_onoff": {
