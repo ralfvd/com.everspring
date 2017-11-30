@@ -60,14 +60,14 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 			  "index": 3,
 			  "size": 1,
 			  "parser": function( input ) {
-				  return new Buffer([ input ? 1 : 0 ]);
+				  return new Buffer([ parseInt(input) ]);
 			  }
 		  },
 		  "switch_type": {
 			  "index": 4,
 			  "size": 1,
 			  "parser": function( input ) {
-				  return new Buffer([ input ? 1 : 0 ]);
+				  return new Buffer([ parseInt(input) ]);
 			  }
 		  },
 		  "dimming_onoff": {
