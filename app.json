@@ -3,7 +3,7 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.2.2",
+    "version": "0.2.3",
     "compatibility": ">=0.9.0",
     "description": {
         "en": "Everspring"
@@ -26,6 +26,10 @@
             {
                 "name": "Alexander",
                 "email": "vdhooft@gmail.nl"
+            },
+            {
+                "name": "Jonas Lundblad",
+                "email": "jolnyx@gmail.com"
             }
         ]
     },

@@ -4,6 +4,7 @@ This app adds support for Everspring devices.
 
 Supported devices:
 
+- Everspring AD146 (In-wall dimmer)
 - Everspring AD147 ( Dimmer plug )
 - Everspring AD142(2) ( Dimmer plug )
 - Everspring AN157 ( On/Off plug )
@@ -43,6 +44,7 @@ Yes ;-)
 
 ### Changelog
 
+- V0.2.3 2017-12-01 : AD146 added (*by Jonas L, thanks to John L for testing*)
 - V0.2.1 2017-04-06 : SM103 added (code by Rebtor )
 - V0.2.0 2017-04-23 : SF812 added (code by Rebtor)
 - V0.1.9 2017-03-26 : SP103 bugfix to report motion again
