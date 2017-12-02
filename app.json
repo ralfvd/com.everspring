@@ -322,8 +322,8 @@
                 "onoff"
             ],
             "images": {
-                "large": "/drivers/AD146/assets/images/large.jpg",
-                "small": "/drivers/AD146/assets/images/small.jpg"
+                "large": "/drivers/AD146/assets/images/large.png",
+                "small": "/drivers/AD146/assets/images/small.png"
             },
             "settings": [
                 {
