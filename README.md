@@ -18,7 +18,7 @@ Supported devices:
 - Everspring SP103 ( PIR motion sensor )
 - Everspring ST812 ( Water alarm detector ) [ BETA ]
 - Everspring ST814 ( Temperature & Humidity sensor )
-
+- Everpsring HSM02-1 ( Door/window detector )
 Central discussion/support/request topic: https://forum.athom.com/discussion/2418/
 
 ### Donate
@@ -44,6 +44,7 @@ Yes ;-)
 
 ### Changelog
 
+- V0.2.4 2018-03-05 : HSM02-1 added (*by Ilya Gitlin*)
 - V0.2.3 2017-12-01 : AD146 added (*by Jonas L, thanks to John L for testing*)
 - V0.2.1 2017-04-06 : SM103 added (code by Rebtor )
 - V0.2.0 2017-04-23 : SF812 added (code by Rebtor)
