@@ -33,9 +33,6 @@ If you like the app, consider a donation to support development
 
 ### Known bugs/limitations
 
-- [Fixed in 0.1.5] Dimmer plugs: Setting dimmer values in a flow will result in light to be turned on 100 %. Non-app bug, should be fixed by Homey FW.
-- [Fixed in 0.1.6] AD1422 : Current state (on/off) isn't always correct when using dimming in device card; non-app bug, should be fixed by Homey FW
-- [Fixed in 0.1.6 by polling] AD1422 : Local button for on/off isn't sent back to Homey  
 - [Removed in 0.1.6] SP103 : Tamper alarm will not work
 - ST814 sensor doesn't always work as expected. Debugging ongoing to get it more reliable
 
