@@ -3,7 +3,7 @@
     "name": {
         "en": "Everspring"
     },
-    "version": "0.2.3",
+    "version": "0.2.4",
     "compatibility": ">=0.9.0",
     "description": {
         "en": "Everspring"
@@ -928,6 +928,80 @@
                     },
                     "attr": {
                         "min": 1,
+                        "max": 127
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HSM02-1",
+            "name": {
+                "en": "Everspring HSM02-1",
+                "nl": "Everspring HSM02-1"
+            },
+            "zwave": {
+                "manufacturerId": 278,
+                "productTypeId": 2,
+                "productId": 1,
+                "learnmode": {
+                    "image": "/drivers/HSM02-1/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Triple click the tamperswitch behind on the back of the sensor",
+                        "nl": "Driemaal drukken op de tamperknop achter achterop de sensor"
+                    }
+                },
+                "associationGroups": [1],
+                "defaultConfiguration": [
+                    {
+                        "id": "basic_set_level",
+                        "size": 2,
+                        "value": 99
+                    },
+                    {
+                        "id": "off_delay",
+                        "size": 1,
+                        "value": "0"
+                    }
+                ]
+            },
+            "class": "sensor",
+            "capabilities": [ "alarm_contact", "measure_battery"],
+            "images": {
+                "large": "/drivers/HSM02-1/assets/images/large.png",
+                "small": "/drivers/HSM02-1/assets/images/small.png"
+            },
+            "settings": [
+                {
+                    "id": "basic_set_level",
+                    "type": "number",
+                    "label": {
+                        "en": "Basic set level",
+                        "nl": "Basis inschakel instelling"
+                    },
+                    "value": 99,
+                    "hint": {
+                        "en": "Value to be sent with a BASIC SET command.",
+                        "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+                    },
+                    "attr": {
+                        "min": 0,
+                        "max": 99
+                    }
+                },
+                {
+                    "id": "off_delay",
+                    "type": "number",
+                    "label": {
+                        "en": "off Delay (s)",
+                        "nl": "uit Vertraging (s)"
+                    },
+                    "value": 0,
+                    "hint": {
+                        "en": "The Configuration parameter that can be used to adjust the amount of delay before  the  OFF  command  is  transmitted  as  Configuration  Parameter  #2. This  parameter  can  be  configured  with  the  value  of  1  through  127,  where  1  means 1 second delay and 127 means 127 seconds of delay.",
+                        "nl": "Met deze instelling kan ingesteld worden hoe lang er gewacht moet worden met het versturen van het OFF commando. Deze instelling kan worden ingsteld met een waarde tussen de 1 en 127, waar 1 staat voor 1 seconde verstraging en 127 staat voor 127 seconden vertraging."
+                    },
+                    "attr": {
+                        "min": 0,
                         "max": 127
                     }
                 }
