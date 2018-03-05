@@ -547,8 +547,8 @@
         {
             "id": "HSP02",
             "name": {
-                "en": "Everspring HSP02",
-                "nl": "Everspring HSP02"
+                "en": "HSP02 Everspring",
+                "nl": "HSP02 Everspring"
             },
             "zwave": {
                 "manufacturerId": 278,
@@ -869,8 +869,8 @@
         {
             "id": "SM103",
             "name": {
-                "en": "Everspring SM103",
-                "nl": "Everspring SM103"
+                "en": "SM103 Everspring",
+                "nl": "SM103 Everspring"
             },
             "zwave": {
                 "manufacturerId": 96,
@@ -943,8 +943,8 @@
         {
             "id": "HSM02-1",
             "name": {
-                "en": "Everspring HSM02-1",
-                "nl": "Everspring HSM02-1"
+                "en": "HSM02-1 Everspring",
+                "nl": "HSM02-1 Everspring"
             },
             "zwave": {
                 "manufacturerId": 278,
@@ -1069,7 +1069,7 @@
         {
             "id": "ST-814",
             "name": {
-                "en": "Everspring ST-814"
+                "en": "ST-814 Everspring"
             },
             "zwave": {
                 "manufacturerId": 96,
