@@ -6,7 +6,7 @@ const ZwaveDriver = require('homey-zwavedriver');
 // http://www.everspring.com/ST812.aspx
 
 module.exports = new ZwaveDriver( path.basename(__dirname), {
-	debug: true,
+	debug: false,
 	capabilities: {
 
     alarm_water: {
