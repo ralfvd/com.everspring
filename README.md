@@ -12,13 +12,14 @@ Supported devices:
 - Everspring AN179 ( On/Off In-wall plug) [ BETA ]
 - Everspring AN180 ( On/Off plug )
 - Everspring AN181 ( On/Off plug with power metering)
+- Everpsring HSM02-1 ( Door/window detector )
 - Everspring HSP02 ( PIR motion sensor )
 - Everspring SF812 ( Smoke detector )
 - Everpsring SM103 ( Door/window detector )
 - Everspring SP103 ( PIR motion sensor )
 - Everspring ST812 ( Water alarm detector ) [ BETA ]
 - Everspring ST814 ( Temperature & Humidity sensor )
-- Everpsring HSM02-1 ( Door/window detector )
+
 Central discussion/support/request topic: https://forum.athom.com/discussion/2418/
 
 ### Donate

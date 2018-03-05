@@ -33,6 +33,13 @@
             }
         ]
     },
+    "contributing": {
+       "donate": {
+           "paypal": {
+               "username": "ralfvd"
+           }
+       }
+    },
     "drivers": [
         {
             "id": "AN179",
