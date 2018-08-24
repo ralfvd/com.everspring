@@ -571,7 +571,7 @@
                     {
                         "id": "enable_disable_sensor_detection",
                         "size": 1,
-                        "value": "1"
+                        "value": 1
                     },
                     {
                         "id": "sensitivity_level",
@@ -626,7 +626,7 @@
                         "en": "Set motion detection function for groups",
                         "nl": "Schakel bewegingsmelding in voor groepen"
                     },
-                    "value": "1",
+                    "value": 1,
                     "hint": {
                         "en": "Groups to send motion detection to",
                         "nl": "Bepaald voor welke groepen de bewegingsmelding verstuurd wordt"
