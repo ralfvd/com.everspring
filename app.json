@@ -866,7 +866,54 @@
                 }
             ]
         },
-        
+        {
+            "id": "SP816",
+            "name": {
+                "en": "SP816 Motion sensor",
+                "nl": "SP816 Motion sensor"
+            },
+            "zwave": {
+                "manufacturerId": 96,
+                "productId": 5,
+                "productTypeId": 1,
+                "learnmode": {
+                    "image": "/drivers/SP816/assets/learnmode.svg",
+                    "instruction": {
+                        "en": "Click the tamper switch behind the battery cover 3 times",
+                        "nl": "Druk 3x op de tamper knop achter de batterij klep"
+                    }
+                },
+                "associationGroups": [ 1 ]
+            },
+            "class": "sensor",
+            "capabilities": [
+                "alarm_motion",
+                "measure_battery"
+            ],
+            "images": {
+                "large": "/drivers/SP816/assets/images/large.jpg",
+                "small": "/drivers/SP816/assets/images/small.jpg"
+            },
+            "settings": [
+                {
+                    "id": "phase_on",
+                    "type": "number",
+                    "label": {
+                        "en": "Phase on level",
+                        "nl": "Phase on level"
+                    },
+                    "value": 99,
+                    "hint": {
+                        "en": "Phase on level command",
+                        "nl": "Phase on level command"
+                    },
+                    "attr": {
+                        "min": 0,
+                        "max": 127
+                    }
+                }
+            ]
+        },
         {
             "id": "SM103",
             "name": {
