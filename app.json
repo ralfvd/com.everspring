@@ -527,12 +527,12 @@
             "settings": [
                 {
                     "id": "poll_interval",
-                    "type": "number",
+                    "type": "text",
                     "attr": {
                         "min": 60,
                         "max": 3600
                     },
-                    "value": 300,
+                    "value": "300",
                     "label": {
                         "en": "Poll Interval",
                         "nl": "Poll Interval"
@@ -604,12 +604,12 @@
             "settings": [
                 {
                     "id": "basic_set_level",
-                    "type": "number",
+                    "type": "text",
                     "label": {
                         "en": "Basic set level",
                         "nl": "Basis inschakel instelling"
                     },
-                    "value": 99,
+                    "value": "99",
                     "hint": {
                         "en": "Value to be sent with a BASIC SET command.",
                         "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
@@ -621,7 +621,7 @@
                 },
                 {
                     "id": "enable_disable_sensor_detection",
-                    "type": "dropdown",
+                    "type": "number",
                     "label": {
                         "en": "Set motion detection function for groups",
                         "nl": "Schakel bewegingsmelding in voor groepen"
@@ -941,7 +941,7 @@
                     {
                         "id": "off_delay",
                         "size": 1,
-                        "value": "1"
+                        "value": 1
                     }
                 ]
             },
