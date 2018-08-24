@@ -17,6 +17,7 @@ Supported devices:
 - Everspring SF812 ( Smoke detector )
 - Everpsring SM103 ( Door/window detector )
 - Everspring SP103 ( PIR motion sensor )
+- Everspring / Nexa SP816 ( PIR motion sensor [ BETA] )
 - Everspring ST812 ( Water alarm detector ) [ BETA ]
 - Everspring ST814 ( Temperature & Humidity sensor )
 
