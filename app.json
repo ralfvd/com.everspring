@@ -564,7 +564,7 @@
                 "associationGroups": [ 1, 2 ],
                 "defaultConfiguration": [
                     {
-                        "id": "basic_set_level",
+                        "id": 1,
                         "size": 1,
                         "value": 99
                     },
@@ -1015,7 +1015,7 @@
                     {
                         "id": "off_delay",
                         "size": 1,
-                        "value": "0"
+                        "value": 0
                     }
                 ]
             },
