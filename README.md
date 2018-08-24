@@ -43,6 +43,7 @@ Yes ;-)
 
 ### Changelog
 
+- V0.2.5 2018-08-24 : SP816 (added)
 - V0.2.4 2018-03-05 : HSM02-1 added (*by Ilya Gitlin*)
 - V0.2.3 2017-12-01 : AD146 added (*by Jonas L, thanks to John L for testing*)
 - V0.2.1 2017-04-06 : SM103 added (code by Rebtor )
