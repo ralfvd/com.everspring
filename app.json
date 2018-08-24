@@ -569,27 +569,27 @@
                         "value": 99
                     },
                     {
-                        "id": "enable_disable_sensor_detection",
+                        "id": 2,
                         "size": 1,
                         "value": 1
                     },
                     {
-                        "id": "sensitivity_level",
+                        "id": 3,
                         "size": 1,
                         "value": 6
                     },
                     {
-                        "id": "trigger_interval",
+                        "id": 4,
                         "size": 2,
                         "value": 180
                     },
                     {
-                        "id": "lux_level",
+                        "id": 5,
                         "size": 1,
                         "value": 10
                     },
                     {
-                        "id": "on_off_duration",
+                        "id": 6,
                         "size": 2,
                         "value": 15
                     }
@@ -934,12 +934,12 @@
                 "associationGroups": [1],
                 "defaultConfiguration": [
                     {
-                        "id": "basic_set_level",
+                        "id": 1,
                         "size": 1,
                         "value": 99
                     },
                     {
-                        "id": "off_delay",
+                        "id": 2,
                         "size": 1,
                         "value": 1
                     }
@@ -1008,12 +1008,12 @@
                 "associationGroups": [1],
                 "defaultConfiguration": [
                     {
-                        "id": "basic_set_level",
+                        "id": 1,
                         "size": 2,
                         "value": 99
                     },
                     {
-                        "id": "off_delay",
+                        "id": 2,
                         "size": 1,
                         "value": 0
                     }
@@ -1082,11 +1082,12 @@
                 "associationGroups": [1],
                 "defaultConfiguration": [
                     {
-                        "id": "basic_set_level",
+                        "id": 1,
                         "size": 1,
                         "value": 99
                     }
                 ]
+
             },
             "class": "sensor",
             "capabilities": [ "alarm_water", "measure_battery"],
