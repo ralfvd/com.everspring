@@ -874,8 +874,8 @@
             },
             "zwave": {
                 "manufacturerId": 96,
-                "productTypeId": 257,
-                "productId": 1,
+                "productTypeId": 1,
+                "productId": 5,
                 "learnmode": {
                     "image": "/drivers/SP816/assets/learnmode.svg",
                     "instruction": {
