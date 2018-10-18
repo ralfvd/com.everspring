@@ -10,15 +10,20 @@ module.exports = new ZwaveDriver( path.basename(__dirname), {
 	capabilities: {
 
 		'alarm_motion': {
-			'command_class'				: 'COMMAND_CLASS_BASIC',
-			'command_report'			: 'BASIC_SET',
-			'command_report_parser'		: function( report ){
-				Homey.log('[EVR DEBUG] alarm_motion report:', report);
-				if (report.hasOwnProperty('Value (Raw)')) {
-				// if (typeof report['Value (Raw)'][0] !== 'undefined') {
-					return report['Value (Raw)'][0] > 0;
+			command_class: 'COMMAND_CLASS_NOTIFICATION',
+			command_report: 'NOTIFICATION_REPORT',
+			command_report_parser: report => {
+//				Homey.log('[EVR DEBUG] alarm_motion report:', report);
+				if (report && report.hasOwnProperty('Notification Type') && 
+					report.hasOwnProperty('Event')) {
+					if (report['Notification Type'] === 'Home Security') {
+						return report['Event'] === 8;
+					} else {
+						return null;
+					}
 				}
-			}
+				return null;
+			},
 		},
 
 //		'alarm_tamper': {
