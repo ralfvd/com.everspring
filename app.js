@@ -5,7 +5,7 @@ const Homey = require('homey');
 class Everspring extends Homey.App {
 
 	onInit() {
-		this.log('Everspring is running...');
+		this.log('Everspring SDK-2 is running...');
 	}
 
 }

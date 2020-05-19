@@ -12,8 +12,8 @@
   "category": [ "climate", "security", "appliances", "lights" ],
   "permissions": [],
   "images": {
-    "large": "/assets/images/large.png",
-    "small": "/assets/images/small.png"
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
   },
   "author": {
     "name": "Ralf van Dooren",
@@ -21,7 +21,7 @@
   },
   "drivers": [
     {
-                "id": "ad147",
+                "id": "AD147",
                 "name": {
                     "en": "AD147 EVERSPRING Wall Plug"
                 },
@@ -30,7 +30,7 @@
                     "productTypeId": 3,
                     "productId": 3,
                     "learnmode": {
-                        "image": "/drivers/ad147/assets/learnmode.svg",
+                        "image": "/drivers/AD147/assets/learnmode.svg",
                         "instruction": {
                             "en": "Press the link key three times within 1.5 seconds to put the unit into inclusion mode.",
                             "nl": "Klik de link knop 3 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
@@ -44,8 +44,8 @@
                     "onoff"
                 ],
                 "images": {
-                    "large": "/drivers/ad147/assets/images/large.jpg",
-                    "small": "/drivers/ad147/assets/images/small.jpg"
+                    "large": "/drivers/AD147/assets/images/large.jpg",
+                    "small": "/drivers/AD147/assets/images/small.jpg"
                 },
                 "settings": [
                     {
@@ -92,6 +92,277 @@
                         }
                     }
                 ]
-            }
+            },
+            {
+                "id": "AN180",
+                "name": {
+                    "en": "AN180 EVERSPRING Wall Plug"
+                },
+                "zwave": {
+                    "manufacturerId": 96,
+                    "productTypeId": 4,
+                    "productId": 7,
+                    "learnmode": {
+                        "image": "/drivers/AN180/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Press the link key three times within 1.5 seconds to put the unit into inclusion mode.",
+                            "nl": "Klik de link knop 3 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+                        }
+                    },
+                    "associationGroups": [ 1 ]
+                },
+                "class": "socket",
+                "capabilities": [
+                    "onoff"
+                ],
+                "images": {
+                    "large": "/drivers/AN180/assets/images/large.jpg",
+                    "small": "/drivers/AN180/assets/images/small.jpg"
+                },
+                "settings": [
+                    {
+                        "id": "meter_report_interval",
+                        "type": "number",
+                        "attr": {
+                            "min": 3,
+                            "max": 25
+                        },
+                        "value": 3,
+                        "label": {
+                            "en": "Meter Report Interval (s)",
+                            "nl": "Meter Report Interval (s)"
+                        },
+                        "hint": {
+                            "en": "The amount of seconds between a Meter Report being send to controller.",
+                            "nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
+                        }
+                    },
+                    {
+                        "id": "remember_state",
+                        "type": "checkbox",
+                        "label": {
+                            "en": "Return to last known state after power loss",
+                            "nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+                        },
+                        "value": true,
+                        "hint": {
+                            "en": "After power loss the state of the relay will switch to last known.",
+                            "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+                        }
+                    }
+
+                ]
+            },
+            {
+                "id": "AN181",
+                "name": {
+                    "en": "AN181 EVERSPRING Wall Plug"
+                },
+                "zwave": {
+                    "manufacturerId": 96,
+                    "productTypeId": 4,
+                    "productId": 6,
+                    "learnmode": {
+                        "image": "/drivers/AN181/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Press the link key three times within 1.5 seconds to put the unit into inclusion mode.",
+                            "nl": "Klik de link knop 3 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+                        }
+                    },
+                    "associationGroups": [ 1 ]
+                },
+                "class": "socket",
+                "capabilities": [
+                    "onoff",
+                    "measure_power"
+                ],
+                "images": {
+                    "large": "/drivers/AN181/assets/images/large.jpg",
+                    "small": "/drivers/AN181/assets/images/small.jpg"
+                },
+                "settings": [
+                    {
+                        "id": "meter_report_interval",
+                        "type": "number",
+                        "attr": {
+                            "min": 3,
+                            "max": 25
+                        },
+                        "value": 3,
+                        "label": {
+                            "en": "Meter Report Interval (s)",
+                            "nl": "Meter Report Interval (s)"
+                        },
+                        "hint": {
+                            "en": "The amount of seconds between a Meter Report being send to controller.",
+                            "nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
+                        }
+                    },
+                    {
+                        "id": "remember_state",
+                        "type": "checkbox",
+                        "label": {
+                            "en": "Return to last known state after power loss",
+                            "nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+                        },
+                        "value": true,
+                        "hint": {
+                            "en": "After power loss the state of the relay will switch to last known.",
+                            "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+                        }
+                    }
+
+                ]
+            },
+            {
+                "id": "ST-814",
+                "name": {
+                    "en": "ST-814 Everspring"
+                },
+                "energy": {
+                  "batteries": ["AA", "AA","AA"]
+                },
+                "zwave": {
+                    "manufacturerId": 96,
+                    "productTypeId": 6,
+                    "productId": 1,
+                    "learnmode": {
+                        "image": "/drivers/ST-814/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Press the C/F button on your ST-814 3 times",
+                            "nl": "Druk 3 keer op de C/F knop op de ST-814 "
+                        }
+                    },
+                    "associationGroups": [ 1 ]
+                },
+                "class": "sensor",
+                "capabilities": [ "measure_battery", "measure_humidity","measure_temperature" ],
+                "images": {
+                    "large": "/drivers/ST-814/assets/images/large.png",
+                    "small": "/drivers/ST-814/assets/images/small.png"
+                },
+                "settings": [
+                    {
+                        "id": "basic-set-level",
+                        "type": "number",
+                        "label": {
+                            "en": "Dim level (0 = off)"
+                        },
+                        "value": 99,
+                        "attr": {
+                            "min": 0,
+                            "max": 99
+                        },
+                        "hint": {
+                            "en": "Set basic set value to be on (or Dim Level) /off"
+                        }
+                    },
+                    {
+                        "id": "temperature-on-trigger",
+                        "type": "number",
+                        "label": {
+                            "en": "Temperature on trigger"
+                        },
+                        "value": 30,
+                        "attr": {
+                            "min": -20,
+                            "max": 99
+                        },
+                        "hint": {
+                            "en": "-20 - 50 ; 99: clear value"
+                        }
+                    },
+                    {
+                        "id": "temperature-off-trigger",
+                        "type": "number",
+                        "label": {
+                            "en": "Temperature off trigger"
+                        },
+                        "value": 20,
+                        "attr": {
+                            "min": -20,
+                            "max": 99
+                        },
+                        "hint": {
+                            "en": "-20 - 50 ; 99: clear value"
+                        }
+                    },
+                    {
+                        "id": "humidity-on-trigger",
+                        "type": "number",
+                        "label": {
+                            "en": "Humidity on trigger"
+                        },
+                        "value": 50,
+                        "attr": {
+                            "min": 20,
+                            "max": 99
+                        },
+                        "hint": {
+                            "en": "20 - 90 ; 99: clear value"
+                        }
+                    },
+                    {
+                        "id": "humidity-off-trigger",
+                        "type": "number",
+                        "label": {
+                            "en": "Humidity off trigger"
+                        },
+                        "value": 40,
+                        "attr": {
+                            "min": 20,
+                            "max": 99
+                        },
+                        "hint": {
+                            "en": "20 - 90 ; 99: clear value"
+                        }
+                    },
+                    {
+                        "id": "auto-report-time-interval",
+                        "type": "number",
+                        "label": {
+                            "en": "Report time interval"
+                        },
+                        "value": 0,
+                        "attr": {
+                            "min": 0,
+                            "max": 1439
+                        },
+                        "hint": {
+                            "en": "Set auto report time interval to be _ mins"
+                        }
+                    },
+                    {
+                        "id": "auto-report-temp-change",
+                        "type": "number",
+                        "label": {
+                            "en": "Report temperature change"
+                        },
+                        "value": 0,
+                        "attr": {
+                            "min": 0,
+                            "max": 70
+                        },
+                        "hint": {
+                            "en": "Set auto report temp. trigger interval to be _ degree. "
+                        }
+                    },
+                    {
+                        "id": "auto-report-humidity-change",
+                        "type": "number",
+                        "label": {
+                            "en": "Report humidity change"
+                        },
+                        "value": 0,
+                        "attr": {
+                            "min": 5,
+                            "max": 70
+                        },
+                        "hint": {
+                            "en": "Set auto report humidity trigger interval to be _ %. "
+                        }
+                    }
+                ]
+                }
   ]
 }

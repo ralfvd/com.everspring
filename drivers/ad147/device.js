@@ -2,12 +2,21 @@
 
 const { ZwaveDevice } = require('homey-meshdriver');
 
-class MyZWaveDevice extends ZwaveDevice {
-	
-	onMeshInit() {
-		this.log('MyZWaveDevice has been inited');
+class EverspringAD147 extends ZwaveDevice {
+
+	async onMeshInit() {
+
+		//this.log('AD147 has been inited');
+
+		// enable debugging
+		this.enableDebug();
+		// print the node's info to the console
+		this.printNode();
+
+		this.registerCapability('onoff', 'SWITCH_BINARY');
+		this.registerCapability('dim', 'SWITCH_MULTILEVEL');
 	}
-	
+
 }
 
-module.exports = MyZWaveDevice;
+module.exports = EverspringAD147;
