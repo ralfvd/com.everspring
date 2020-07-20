@@ -2,7 +2,7 @@
   "id": "com.everspring",
   "version": "2.0.0",
   "compatibility": ">=5.0.0",
-  "sdk": 2,
+  "sdk": 3,
   "name": {
     "en": "Everspring"
   },
@@ -19,6 +19,15 @@
     "name": "Ralf van Dooren",
     "email": "ralfvd@gmail.com"
   },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "ralfvd"
+      }
+    }
+  },
+  "homeyCommunityTopicId": 30094,
+  "source": "https://github.com/ralfvd/com.everspring",
   "drivers": [
     {
         "id": "AD146",
@@ -708,6 +717,38 @@
                 ]
             },
             {
+                "id": "SF812",
+                "name": {
+                    "en": "SF812 Smoke sensor",
+                    "nl": "SF812 Rook detector"
+                },
+                "energy": {
+                  "batteries": ["PP3"]
+                },
+                "zwave": {
+                    "manufacturerId": 96,
+                    "productTypeId": 13,
+                    "productId": 1,
+                    "learnmode": {
+                        "image": "/drivers/SF812/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Click the bindings switch ",
+                            "nl": "Druk op de bindings knop "
+                        }
+                    },
+                    "associationGroups": [ 1 ]
+                },
+                "class": "sensor",
+                "capabilities": [
+                    "measure_battery","alarm_smoke"
+                ],
+                "images": {
+                    "large": "/drivers/SF812/assets/images/large.png",
+                    "small": "/drivers/SF812/assets/images/small.png"
+                },
+                "settings": []
+            },
+            {
                 "id": "SP103",
                 "name": {
                     "en": "SP103 Motion sensor",
@@ -750,6 +791,160 @@
                         "hint": {
                             "en": "Phase on level command",
                             "nl": "Phase on level command"
+                        },
+                        "attr": {
+                            "min": 0,
+                            "max": 127
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "SM103",
+                "name": {
+                    "en": "SM103 Everspring",
+                    "nl": "SM103 Everspring"
+                },
+                "energy": {
+                  "batteries": ["AAA","AAA","AAA"]
+                },
+                "zwave": {
+                    "manufacturerId": 96,
+                    "productTypeId": 2,
+                    "productId": 1,
+                    "learnmode": {
+                        "image": "/drivers/SM103/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Triple click the tamperswitch behind on the back of the sensor",
+                            "nl": "Driemaal drukken op de tamperknop achter achterop de sensor"
+                        }
+                    },
+                    "associationGroups": [1],
+                    "defaultConfiguration": [
+                        {
+                            "id": 1,
+                            "size": 1,
+                            "value": 99
+                        },
+                        {
+                            "id": 2,
+                            "size": 1,
+                            "value": 1
+                        }
+                    ]
+                },
+                "class": "sensor",
+                "capabilities": [ "alarm_contact", "measure_battery"],
+                "images": {
+                    "large": "/drivers/SM103/assets/images/large.png",
+                    "small": "/drivers/SM103/assets/images/small.png"
+                },
+                "settings": [
+                    {
+                        "id": "basic_set_level",
+                        "type": "number",
+                        "label": {
+                            "en": "Basic set level",
+                            "nl": "Basis inschakel instelling"
+                        },
+                        "value": 99,
+                        "hint": {
+                            "en": "Value to be sent with a BASIC SET command.",
+                            "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+                        },
+                        "attr": {
+                            "min": 1,
+                            "max": 99
+                        }
+                    },
+                    {
+                        "id": "off_delay",
+                        "type": "number",
+                        "label": {
+                            "en": "off Delay (s)",
+                            "nl": "uit Vertraging (s)"
+                        },
+                        "value": 1,
+                        "hint": {
+                            "en": "The Configuration parameter that can be used to adjust the amount of delay before  the  OFF  command  is  transmitted  as  Configuration  Parameter  #2. This  parameter  can  be  configured  with  the  value  of  1  through  127,  where  1  means 1 second delay and 127 means 127 seconds of delay.",
+                            "nl": "Met deze instelling kan ingesteld worden hoe lang er gewacht moet worden met het versturen van het OFF commando. Deze instelling kan worden ingsteld met een waarde tussen de 1 en 127, waar 1 staat voor 1 seconde verstraging en 127 staat voor 127 seconden vertraging."
+                        },
+                        "attr": {
+                            "min": 1,
+                            "max": 127
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "HSM02-1",
+                "name": {
+                    "en": "HSM02-1 Everspring",
+                    "nl": "HSM02-1 Everspring"
+                },
+                "energy": {
+                  "batteries": ["CR2450","CR2450"]
+                },
+                "zwave": {
+                    "manufacturerId": 278,
+                    "productTypeId": 2,
+                    "productId": 1,
+                    "learnmode": {
+                        "image": "/drivers/HSM02-1/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Triple click the tamperswitch behind on the back of the sensor",
+                            "nl": "Driemaal drukken op de tamperknop achter achterop de sensor"
+                        }
+                    },
+                    "associationGroups": [1],
+                    "defaultConfiguration": [
+                        {
+                            "id": 1,
+                            "size": 2,
+                            "value": 99
+                        },
+                        {
+                            "id": 2,
+                            "size": 1,
+                            "value": 0
+                        }
+                    ]
+                },
+                "class": "sensor",
+                "capabilities": [ "alarm_contact", "measure_battery"],
+                "images": {
+                    "large": "/drivers/HSM02-1/assets/images/large.png",
+                    "small": "/drivers/HSM02-1/assets/images/small.png"
+                },
+                "settings": [
+                    {
+                        "id": "basic_set_level",
+                        "type": "number",
+                        "label": {
+                            "en": "Basic set level",
+                            "nl": "Basis inschakel instelling"
+                        },
+                        "value": 99,
+                        "hint": {
+                            "en": "Value to be sent with a BASIC SET command.",
+                            "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+                        },
+                        "attr": {
+                            "min": 0,
+                            "max": 99
+                        }
+                    },
+                    {
+                        "id": "off_delay",
+                        "type": "number",
+                        "label": {
+                            "en": "off Delay (s)",
+                            "nl": "uit Vertraging (s)"
+                        },
+                        "value": 0,
+                        "hint": {
+                            "en": "The Configuration parameter that can be used to adjust the amount of delay before  the  OFF  command  is  transmitted  as  Configuration  Parameter  #2. This  parameter  can  be  configured  with  the  value  of  1  through  127,  where  1  means 1 second delay and 127 means 127 seconds of delay.",
+                            "nl": "Met deze instelling kan ingesteld worden hoe lang er gewacht moet worden met het versturen van het OFF commando. Deze instelling kan worden ingsteld met een waarde tussen de 1 en 127, waar 1 staat voor 1 seconde verstraging en 127 staat voor 127 seconden vertraging."
                         },
                         "attr": {
                             "min": 0,
