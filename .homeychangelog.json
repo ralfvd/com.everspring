@@ -4,5 +4,8 @@
   },
   "2.0.1": {
     "en": "Fixed typo in driver"
+  },
+  "2.0.2": {
+    "en": "Added extra devices"
   }
 }
