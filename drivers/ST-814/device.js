@@ -6,12 +6,12 @@ class EverspringST814 extends ZwaveDevice {
 
 	async onMeshInit() {
 
-		//this.log('AN180 has been inited');
+		//this.log('ST814 has been inited');
 
 		// enable debugging
-		this.enableDebug();
+		//this.enableDebug();
 		// print the node's info to the console
-		this.printNode();
+		//this.printNode();
 
 		this.registerCapability('measure_battery', 'BATTERY');
 		this.registerCapability('measure_temperature', 'SENSOR_MULTILEVEL');

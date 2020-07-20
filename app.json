@@ -1,7 +1,7 @@
 {
   "id": "com.everspring",
   "version": "2.0.0",
-  "compatibility": ">=1.5.0",
+  "compatibility": ">=5.0.0",
   "sdk": 2,
   "name": {
     "en": "Everspring"
@@ -20,6 +20,172 @@
     "email": "ralfvd@gmail.com"
   },
   "drivers": [
+    {
+        "id": "AD146",
+        "name": {
+            "en": "AD146 EVERSPRING Wall Plug"
+        },
+        "zwave": {
+            "manufacturerId": 96,
+            "productTypeId": 3,
+            "productId": 2,
+            "learnmode": {
+                "image": "/drivers/AD146/assets/learnmode.svg",
+                "instruction": {
+                    "en": "Press the link key three times within 1.5 seconds to put the unit into inclusion mode.",
+                    "nl": "Klik de link knop 3 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+                }
+            },
+            "associationGroups": [ 1 ]
+        },
+        "class": "socket",
+        "capabilities": [
+            "dim",
+            "onoff"
+        ],
+        "images": {
+            "large": "/drivers/AD146/assets/images/large.png",
+            "small": "/drivers/AD146/assets/images/small.png"
+        },
+        "settings": [
+            {
+                "id": "basic_set_value",
+                "type": "number",
+                "attr": {
+                    "min": 1,
+                    "max": 255
+                },
+                "value": 255,
+                "label": {
+                    "en": "Basic Set Command Value",
+                    "nl": "Basic Set Command Value"
+                },
+                "hint": {
+                    "en": "The value which is sent over Basic Set",
+                    "nl": "Translate me"
+                }
+            },
+            {
+                "id": "meter_report_interval",
+                "type": "number",
+                "attr": {
+                    "min": 3,
+                    "max": 25
+                },
+                "value": 3,
+                "label": {
+                    "en": "Meter Report Interval (s)",
+                    "nl": "Meter Report Interval (s)"
+                },
+                "hint": {
+                    "en": "The amount of seconds between a Meter Report being send to controller.",
+                    "nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
+                }
+            },
+            {
+                "id": "remember_state",
+                "type": "checkbox",
+                "label": {
+                    "en": "Return to last known state after power loss",
+                    "nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+                },
+                "value": true,
+                "hint": {
+                    "en": "After power loss the state of the relay will switch to last known.",
+                    "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+                }
+            },
+            {
+                "id": "switch_type",
+                "type": "dropdown",
+                "value": "0",
+                "values": [
+                    {
+                        "id": "0",
+                        "label": {
+                            "en": "Single Pole Double Throw",
+                            "nl": "Single Pole Double Throw"
+                        }
+                    },
+                    {
+                        "id": "1",
+                        "label": {
+                            "en": "Toggle Switch",
+                            "nl": "Toggle Switch"
+                        }
+                    }
+                ],
+                "label": {
+                    "en": "Switch type",
+                    "nl": "Translate"
+                },
+                "hint": {
+                    "en": "Specify which type of switch that is connected to the module.",
+                    "nl": "Translate me"
+                }
+            },
+            {
+                "id": "dimming_onoff",
+                "type": "checkbox",
+                "label": {
+                    "en": "Dimming of on/off functionality",
+                    "nl": "Dimming of aan/uit functionaliteit"
+                },
+                "value": false,
+                "hint": {
+                    "en": "When set to 1, the operation mode is not changed; only the light will be 100% immediately.",
+                    "nl": "Als gezet wordt de mode niet aangepast, alleen zal de dimmer direct op 100% staan"
+                }
+            }
+        ]
+    },
+    {
+        "id": "AD1422",
+        "name": {
+            "en": "AD1422 EVERSPRING Wall Plug"
+        },
+        "zwave": {
+            "manufacturerId": 96,
+            "productTypeId": 3,
+            "productId": 1,
+            "learnmode": {
+                "image": "/drivers/AD1422/assets/learnmode.svg",
+                "instruction": {
+                    "en": "Press the link key to put the unit into inclusion mode.",
+                    "nl": "Klik de link knop om de unit in autoinclusion mode te zetten"
+                }
+            },
+            "associationGroups": [ 1 ]
+        },
+        "class": "socket",
+        "capabilities": [
+            "dim",
+            "onoff"
+        ],
+        "images": {
+            "large": "/drivers/AD1422/assets/images/large.png",
+            "small": "/drivers/AD1422/assets/images/small.png"
+        },
+        "settings": [
+            {
+                "id": "poll_interval",
+                "type": "text",
+                "attr": {
+                    "min": 60,
+                    "max": 3600
+                },
+                "value": "300",
+                "label": {
+                    "en": "Poll Interval",
+                    "nl": "Poll Interval"
+                },
+                "hint": {
+                    "en": "The amount of seconds between asking the device for a status update (60-3600 s).",
+                    "nl": "Aantal seconden tussen het opvragen van een status update aan het apparaat (60-3600 s)."
+                }
+            }
+        ]
+    },
     {
                 "id": "AD147",
                 "name": {
@@ -91,6 +257,149 @@
                             "nl": "Als gezet wordt de mode niet aangepast, alleen zal de dimmer direct op 100% staan"
                         }
                     }
+                ]
+            },
+            {
+                "id": "AN157",
+                "name": {
+                    "en": "AN157 EVERSPRING Wall Plug"
+                },
+                "zwave": {
+                    "manufacturerId": 96,
+                    "productTypeId": 4,
+                    "productId": 1,
+                    "learnmode": {
+                        "image": "/drivers/AN157/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Make sure device is off, then press the link key three times within 1.5 seconds.",
+                            "nl": "Zorg dat device af staat, dan druk 3 keer op de link knop binnen 1.5 sec."
+                        }
+                    },
+                    "associationGroups": [ 1 ]
+                },
+                "class": "socket",
+                "capabilities": [
+                    "onoff"
+                ],
+                "images": {
+                    "large": "/drivers/AN157/assets/images/large.jpg",
+                    "small": "/drivers/AN157/assets/images/small.jpg"
+                }
+            },
+            {
+                "id": "AN158",
+                "name": {
+                    "en": "AN158 EVERSPRING Wall Plug"
+                },
+                "zwave": {
+                    "manufacturerId": 96,
+                    "productTypeId": 4,
+                    "productId": 2,
+                    "learnmode": {
+                        "image": "/drivers/AN158/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Make sure device is off, then press the link key three times within 1.5 seconds.",
+                            "nl": "Zorg dat device af staat, dan druk 3 keer op de link knop binnen 1.5 sec."
+                        }
+                    },
+                    "associationGroups": [ 1 ]
+                },
+                "class": "socket",
+                "capabilities": [
+                    "onoff",
+                    "measure_power"
+                ],
+                "images": {
+                    "large": "/drivers/AN158/assets/images/large.jpg",
+                    "small": "/drivers/AN158/assets/images/small.jpg"
+                },
+                "settings": [
+                    {
+                        "id": "meter_report_interval",
+                        "type": "number",
+                        "attr": {
+                            "min": 0,
+                            "max": 255
+                        },
+                        "value": 3,
+                        "label": {
+                            "en": "Meter Report Interval (10s)",
+                            "nl": "Meter Report Interval (10s)"
+                        },
+                        "hint": {
+                            "en": "The amount of seconds (times 10: e.g. 3 = 30s) between a Meter Report being send to controller.",
+                            "nl": "De tijd in seconden (x 10: bv 3 = 30s) tussen de Meter rapportages die naar de controller worden verzonden."
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "AN179",
+                "name": {
+                    "en": "AN179 Everspring In-Wall plug"
+                },
+                "zwave": {
+                    "manufacturerId": 96,
+                    "productTypeId": 4,
+                    "productId": 8,
+                    "learnmode": {
+                        "image": "/drivers/AN179/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Press the link key three times within 1.5 seconds to put the unit into inclusion mode.",
+                            "nl": "Klik de link knop 3 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+                        }
+                    },
+                    "associationGroups": [ 1 ]
+                },
+                "class": "socket",
+                "capabilities": [
+                    "onoff"
+                ],
+                "images": {
+                    "large": "/drivers/AN179/assets/images/large.png",
+                    "small": "/drivers/AN179/assets/images/small.png"
+                },
+                "settings": [
+                    {
+                        "id": "remember_state",
+                        "type": "checkbox",
+                        "label": {
+                            "en": "Return to last known state after power loss",
+                            "nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+                        },
+                        "value": true,
+                        "hint": {
+                            "en": "After power loss the state of the relay will switch to last known.",
+                            "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
+                        }
+                    },
+                    {
+                        "id": "switching_type",
+                        "type": "dropdown",
+                        "label": {
+                            "en": "Switch 1 switching type",
+                            "nl": "Schakelaar 1 type"
+                        },
+                        "value": "0",
+                        "values": [
+                            {
+                                "id": "0",
+                                "label": {
+                                    "en": "Single Pole Double Throw",
+                                    "nl": "Single Pole Double Throw"
+                                }
+                            },
+                            {
+                                "id": "1",
+                                "label": {
+                                    "en": "Toggle switch",
+                                    "nl": "Toggle switch"
+                                }
+                            }
+
+                        ]
+                    }
+
                 ]
             },
             {
@@ -212,6 +521,297 @@
                         }
                     }
 
+                ]
+            },
+            {
+                "id": "HSP02",
+                "name": {
+                    "en": "HSP02 Everspring",
+                    "nl": "HSP02 Everspring"
+                },
+                "energy": {
+                  "batteries": ["CR123A"]
+                },
+                "zwave": {
+                    "manufacturerId": 278,
+                    "productTypeId": 1,
+                    "productId": 1,
+                    "learnmode": {
+                        "image": "/drivers/HSP02/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Triple click the little button behind the battery cover",
+                            "nl": "Driemaal drukken op de knop achter de batterij klep"
+                        }
+                    },
+                    "associationGroups": [ 1, 2 ],
+                    "defaultConfiguration": [
+                        {
+                            "id": 1,
+                            "size": 1,
+                            "value": 99
+                        },
+                        {
+                            "id": 2,
+                            "size": 1,
+                            "value": 1
+                        },
+                        {
+                            "id": 3,
+                            "size": 1,
+                            "value": 6
+                        },
+                        {
+                            "id": 4,
+                            "size": 2,
+                            "value": 180
+                        },
+                        {
+                            "id": 5,
+                            "size": 1,
+                            "value": 10
+                        },
+                        {
+                            "id": 6,
+                            "size": 2,
+                            "value": 15
+                        }
+                    ]
+                },
+                "class": "sensor",
+                "capabilities": [ "alarm_motion", "measure_battery"],
+                "images": {
+                    "large": "/drivers/HSP02/assets/images/large.png",
+                    "small": "/drivers/HSP02/assets/images/small.png"
+                },
+                "settings": [
+                    {
+                        "id": "basic_set_level",
+                        "type": "text",
+                        "label": {
+                            "en": "Basic set level",
+                            "nl": "Basis inschakel instelling"
+                        },
+                        "value": "99",
+                        "hint": {
+                            "en": "Value to be sent with a BASIC SET command.",
+                            "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+                        },
+                        "attr": {
+                            "min": 1,
+                            "max": 99
+                        }
+                    },
+                    {
+                        "id": "enable_disable_sensor_detection",
+                        "type": "number",
+                        "label": {
+                            "en": "Set motion detection function for groups",
+                            "nl": "Schakel bewegingsmelding in voor groepen"
+                        },
+                        "value": 1,
+                        "hint": {
+                            "en": "Groups to send motion detection to",
+                            "nl": "Bepaald voor welke groepen de bewegingsmelding verstuurd wordt"
+                        },
+                        "values": [
+                            {
+                                "id": "1",
+                                "label": {
+                                    "en": "Group 1 enabled / group 2 enabled (default)",
+                                    "nl": "Groep 1 ingeschakeld / groep 2 ingeschakeld (standaard)"
+                                }
+                            },
+                            {
+                                "id": "2",
+                                "label": {
+                                    "en": "Group 1 enabled / group 2 disabled",
+                                    "nl": "Groep 1 ingeschakeld / groep 2 uitgeschakeld"
+                                }
+                            },
+                            {
+                                "id": "3",
+                                "label": {
+                                    "en": "Group 1 disabled / group 2 disabled",
+                                    "nl": "Groep 1 uitgeschakeld / groep 2 uitgeschakeld"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "sensitivity_level",
+                        "type": "number",
+                        "label": {
+                            "en": "Sensitivity level",
+                            "nl": "Gevoeligheid"
+                        },
+                        "value": 6,
+                        "hint": {
+                            "en": "Sensitivity level of the sensor.",
+                            "nl": "Gevoeligheid van de sensor."
+                        },
+                        "attr": {
+                            "min": 1,
+                            "max": 10
+                        }
+                    },
+                    {
+                        "id": "re-trigger_interval",
+                        "type": "number",
+                        "label": {
+                            "en": "Re-trigger interval (s)",
+                            "nl": "Tijd voor opnieuw verzenden (s)"
+                        },
+                        "value": 180,
+                        "hint": {
+                            "en": "The configuration parameter that can be used to adjust the interval of being re-triggered after the detector has been triggered. No response will be made during this interval if a movement is presented. The time interval can be set between 5 secs to 3600 secs.",
+                            "nl": "Deze waarde kan gebruikt worden om de interval voor opnieuw verzenden van beweging. Geen melding zal gedaan worden tijdens deze periode als er beweging is. De tijd kan ingesteld worden tussen 5 en 3600 seconden."
+                        },
+                        "attr": {
+                            "min": 5,
+                            "max": 3600
+                        }
+                    },
+                    {
+                        "id": "lux_level",
+                        "type": "number",
+                        "label": {
+                            "en": "Light level threshold (%)",
+                            "nl": "Drempelwaarde lichtsterkte (%)"
+                        },
+                        "value": 10,
+                        "hint": {
+                            "en": "A detecting percentage of lux level which determines when the motion sensor will be activated. If percentage of lux level of ambient illumination falls below this percentage, and a person moves across or within the protected area, the detector will emit that there is a motion detected to the controller and activate connected modules and lighting. Percentage can be set between 1% to 100%.",
+                            "nl": "Minimale percentage lux (lichtsterkte) welke bepaald wanneer the bewegingssensor wordt geactiveerd. Als het percentage van de omgevingslichtsterkte beneden dit percentage valt, en er beweegt een persoon binnen of door het beschermde gebied, zal de detector beweging melden aan de controller en verbonden modules en lampen inschakelen. Het percentage kan ingesteld worden tussen 1% en 100%."
+                        },
+                        "attr": {
+                            "min": 1,
+                            "max": 100
+                        }
+                    },
+                    {
+                        "id": "on_off_duration",
+                        "type": "number",
+                        "label": {
+                            "en": "On-off duration (s)",
+                            "nl": "Aan-uit duur (s)"
+                        },
+                        "value": 15,
+                        "hint": {
+                            "en": "On-off duration setting will be useful if the detector is connected to a module or lighting. The duration determines how long the module/lighting should stay ON. Default setting will turn off the module/light after 15 seconds, after it has been turned on. This parameter can be configured with the value of 5 through 3600, where 5 means 5 second delay and 3600 for 3600 seconds (1 hour) delay.",
+                            "nl": "Aan-uit duur instelling is handig als de bewegingsmelder verbonden is met een module of lamp. De tijdsduur bepaald hoe lang de module/lamp ingeschakeld moet blijven. Standaard instelling zal de module/lamp na 15 seconden uitschakelen, nadat het is ingeschakeld. Deze parameter kan geconfigureerd worden met een waarde tussen 5 en 3600 waar 5 staat voor 5 seconden en 3600 voor 3600 seconden (1 uur) vertraging."
+                        },
+                        "attr": {
+                            "min": 1,
+                            "max": 3600
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "SP103",
+                "name": {
+                    "en": "SP103 Motion sensor",
+                    "nl": "SP103 Motion sensor"
+                },
+                "energy": {
+                  "batteries": ["AA","AA","AA"]
+                },
+                "zwave": {
+                    "manufacturerId": 96,
+                    "productTypeId": 257,
+                    "productId": 1,
+                    "learnmode": {
+                        "image": "/drivers/SP103/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Click the tamper switch behind the battery cover",
+                            "nl": "Druk op de tamper knop achter de batterij klep"
+                        }
+                    },
+                    "associationGroups": [ 1 ]
+                },
+                "class": "sensor",
+                "capabilities": [
+                    "alarm_motion",
+                    "measure_battery"
+                ],
+                "images": {
+                    "large": "/drivers/SP103/assets/images/large.jpg",
+                    "small": "/drivers/SP103/assets/images/small.jpg"
+                },
+                "settings": [
+                    {
+                        "id": "phase_on",
+                        "type": "number",
+                        "label": {
+                            "en": "Phase on level",
+                            "nl": "Phase on level"
+                        },
+                        "value": 99,
+                        "hint": {
+                            "en": "Phase on level command",
+                            "nl": "Phase on level command"
+                        },
+                        "attr": {
+                            "min": 0,
+                            "max": 127
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "ST812",
+                "name": {
+                    "en": "ST812 Everspring Water Alarm",
+                    "nl": "ST812 Everspring Water Alarm"
+                },
+                "energy": {
+                  "batteries": ["AA","AA","AA"]
+                },
+                "zwave": {
+                    "manufacturerId": 96,
+                    "productTypeId": 11,
+                    "productId": 1,
+                    "learnmode": {
+                        "image": "/drivers/ST812/assets/learnmode.svg",
+                        "instruction": {
+                            "en": "Press link key [5] three times within 1.5 seconds",
+                            "nl": "Driemaal drukken op de link knop [5]"
+                        }
+                    },
+                    "associationGroups": [1],
+                    "defaultConfiguration": [
+                        {
+                            "id": 1,
+                            "size": 1,
+                            "value": 99
+                        }
+                    ]
+
+                },
+                "class": "sensor",
+                "capabilities": [ "alarm_water", "measure_battery"],
+                "images": {
+                    "large": "/drivers/ST812/assets/images/large.png",
+                    "small": "/drivers/ST812/assets/images/small.png"
+                },
+                "settings": [
+                    {
+                        "id": "basic_set_level",
+                        "type": "number",
+                        "label": {
+                            "en": "Basic set level",
+                            "nl": "Basis inschakel instelling"
+                        },
+                        "value": 99,
+                        "hint": {
+                            "en": "Value to be sent with a BASIC SET command.",
+                            "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+                        },
+                        "attr": {
+                            "min": 1,
+                            "max": 99
+                        }
+                    }
                 ]
             },
             {

@@ -1,12 +1,12 @@
 'use strict';
 
-const { ZwaveDevice } = require('homey-meshdriver');
+const { ZwaveDevice } = require('homey-zwavedriver');
 
 class EverspringAD146 extends ZwaveDevice {
 
-	async onMeshInit() {
+	async onNodeInit() {
 
-		//this.log('AD147 has been inited');
+		//this.log('AD146 has been inited');
 
 		// enable debugging
 		this.enableDebug();
