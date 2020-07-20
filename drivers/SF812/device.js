@@ -19,4 +19,4 @@ class EverspringSF812 extends ZwaveDevice {
 
 }
 
-module.exports = EverspringSP816;
+module.exports = EverspringSF812;

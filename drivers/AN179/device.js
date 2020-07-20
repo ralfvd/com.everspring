@@ -18,4 +18,4 @@ class EverspringAN179 extends ZwaveDevice {
 
 }
 
-module.exports = EverspringAN79;
+module.exports = EverspringAN179;
