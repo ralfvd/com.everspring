@@ -9,9 +9,9 @@ class EverspringAN180 extends ZwaveDevice {
 		//this.log('AN180 has been inited');
 
 		// enable debugging
-		//this.enableDebug();
+		this.enableDebug();
 		// print the node's info to the console
-		//this.printNode();
+		this.printNode();
 
 		this.registerCapability('onoff', 'SWITCH_BINARY');
 	}
