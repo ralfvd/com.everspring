@@ -1,6 +1,6 @@
 {
   "id": "com.everspring",
-  "version": "2.0.3",
+  "version": "2.0.6",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -275,6 +275,67 @@
           "hint": {
             "en": "When set to 1, the operation mode is not changed; only the light will be 100% immediately.",
             "nl": "Als gezet wordt de mode niet aangepast, alleen zal de dimmer direct op 100% staan"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AN145",
+      "name": {
+        "en": "AN145 Lamp holder"
+      },
+      "zwave": {
+        "manufacturerId": 96,
+        "productTypeId": 4,
+        "productId": 1,
+        "learnmode": {
+          "image": "/drivers/AN145/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the link key one time within 1.5 seconds to put the unit into inclusion mode.",
+            "nl": "Klik de link knop 1 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+          }
+        },
+        "associationGroups": [
+          1
+        ]
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/AN145/assets/images/large.png",
+        "small": "/drivers/AN145/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "meter_report_interval",
+          "type": "number",
+          "attr": {
+            "min": 3,
+            "max": 25
+          },
+          "value": 3,
+          "label": {
+            "en": "Meter Report Interval (s)",
+            "nl": "Meter Report Interval (s)"
+          },
+          "hint": {
+            "en": "The amount of seconds between a Meter Report being send to controller.",
+            "nl": "De tijd in seconden tussen de Meter rapportages die naar de controller worden verzonden."
+          }
+        },
+        {
+          "id": "remember_state",
+          "type": "checkbox",
+          "label": {
+            "en": "Return to last known state after power loss",
+            "nl": "Keer terug naar laatst bekende status bij spanningsuitval"
+          },
+          "value": true,
+          "hint": {
+            "en": "After power loss the state of the relay will switch to last known.",
+            "nl": "Schakel terug naar laatst bekende schakelstand na spanningsuitval"
           }
         }
       ]
