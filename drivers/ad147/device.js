@@ -1,6 +1,11 @@
 'use strict';
 
+//SDK2
+//const { ZwaveDevice } = require('homey-meshdriver');
+
+//SDK3
 const { ZwaveDevice } = require('homey-zwavedriver');
+
 
 class EverspringAD147 extends ZwaveDevice {
 
@@ -15,6 +20,15 @@ class EverspringAD147 extends ZwaveDevice {
 
 		this.registerCapability('onoff', 'SWITCH_MULTILEVEL');
 		this.registerCapability('dim', 'SWITCH_MULTILEVEL');
+
+
+//		this.registerReportListener(
+//      'SWITCH_MULTILEVEL',
+//      'SWITCH_MULTILEVEL_REPORT',
+//      (rawReport, parsedReport) => {
+//        console.log('ralf -- registerReportListener', rawReport.Value);
+//      },
+//    );
 	}
 
 }

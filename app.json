@@ -1,6 +1,6 @@
 {
   "id": "com.everspring",
-  "version": "2.0.6",
+  "version": "2.0.9",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -291,8 +291,8 @@
         "learnmode": {
           "image": "/drivers/AN145/assets/learnmode.svg",
           "instruction": {
-            "en": "Press the link key one time within 1.5 seconds to put the unit into inclusion mode.",
-            "nl": "Klik de link knop 1 keer binnen 1.5 sec om de unit in autoinclusion mode te zetten"
+            "en": "Press the link key one time to put the unit into inclusion mode.",
+            "nl": "Klik de link knop 1 keer om de unit in autoinclusion mode te zetten"
           }
         },
         "associationGroups": [
@@ -1014,6 +1014,91 @@
           },
           "attr": {
             "min": 0,
+            "max": 127
+          }
+        }
+      ]
+    },
+    {
+      "id": "SM810",
+      "name": {
+        "en": "SM810 Everspring",
+        "nl": "SM810 Everspring"
+      },
+      "energy": {
+        "batteries": [
+          "CR2450",
+          "CR2450"
+        ]
+      },
+      "zwave": {
+        "manufacturerId": 96,
+        "productTypeId": 2,
+        "productId": 3,
+        "learnmode": {
+          "image": "/drivers/SM810/assets/learnmode.svg",
+          "instruction": {
+            "en": "Triple click the tamperswitch behind on the back of the sensor",
+            "nl": "Driemaal drukken op de tamperknop achter achterop de sensor"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 1,
+            "size": 1,
+            "value": 99
+          },
+          {
+            "id": 2,
+            "size": 1,
+            "value": 1
+          }
+        ]
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact",
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/SM810/assets/images/large.png",
+        "small": "/drivers/SM810/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "basic_set_level",
+          "type": "number",
+          "label": {
+            "en": "Basic set level",
+            "nl": "Basis inschakel instelling"
+          },
+          "value": 99,
+          "hint": {
+            "en": "Value to be sent with a BASIC SET command.",
+            "nl": "Waarde welke meegestuurd wordt met het BASIC SET commando."
+          },
+          "attr": {
+            "min": 1,
+            "max": 99
+          }
+        },
+        {
+          "id": "off_delay",
+          "type": "number",
+          "label": {
+            "en": "off Delay (s)",
+            "nl": "uit Vertraging (s)"
+          },
+          "value": 1,
+          "hint": {
+            "en": "The Configuration parameter that can be used to adjust the amount of delay before  the  OFF  command  is  transmitted  as  Configuration  Parameter  #2. This  parameter  can  be  configured  with  the  value  of  1  through  127,  where  1  means 1 second delay and 127 means 127 seconds of delay.",
+            "nl": "Met deze instelling kan ingesteld worden hoe lang er gewacht moet worden met het versturen van het OFF commando. Deze instelling kan worden ingsteld met een waarde tussen de 1 en 127, waar 1 staat voor 1 seconde verstraging en 127 staat voor 127 seconden vertraging."
+          },
+          "attr": {
+            "min": 1,
             "max": 127
           }
         }

@@ -13,7 +13,7 @@ class EverspringSP816 extends ZwaveDevice {
 		// print the node's info to the console
 		this.printNode();
 
-		this.registerCapability('alarm_motion', 'SENSOR_BINARY');
+		this.registerCapability('alarm_motion', 'NOTIFICATION');
 		this.registerCapability('measure_battery', 'BATTERY');
 	}
 

@@ -1,5 +1,9 @@
 'use strict';
 
+//SDK2
+//const { ZwaveDevice } = require('homey-meshdriver');
+
+//SDK3
 const { ZwaveDevice } = require('homey-zwavedriver');
 
 class EverspringST814 extends ZwaveDevice {
