@@ -2,7 +2,7 @@
 
 const { ZwaveDevice } = require('homey-zwavedriver');
 
-class EverspringHSP02 extends ZwaveDevice {
+class EverspringAN181 extends ZwaveDevice {
 
 	async onNodeInit() {
 
@@ -13,10 +13,11 @@ class EverspringHSP02 extends ZwaveDevice {
 		// print the node's info to the console
 		this.printNode();
 
-		this.registerCapability('alarm_motion', 'SENSOR_BINARY');
-		this.registerCapability('measure_battery', 'BATTERY');
+		this.registerCapability('onoff', 'SWITCH_BINARY');
+		this.registerCapability('measure_power', 'METER');
+
 	}
 
 }
 
-module.exports = EverspringHSP02;
+module.exports = EverspringAN181;
