@@ -6,7 +6,7 @@ class EverspringAN181 extends ZwaveDevice {
 
 	async onNodeInit() {
 
-		//this.log('HSP02 has been inited');
+		//this.log('AN181 has been inited');
 
 		// enable debugging
 		this.enableDebug();

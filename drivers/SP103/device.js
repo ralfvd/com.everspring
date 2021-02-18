@@ -18,15 +18,16 @@ class EverspringSP103 extends ZwaveDevice {
 
 		this.registerCapability('alarm_motion', 'BASIC', {
       get: 'BASIC_GET',
-      report: 'BASIC_REPORT',
+      report: 'BASIC_SET',
       reportParser: report => {
-        if (report && report.hasOwnProperty('Value')) {
-          return report['Value'] > 0;
+        if (report && report.hasOwnProperty('Value (Raw)')) {
+          return report['Value (Raw)'][0] > 0;
+					console.log('sp103 debug: ' + report['Value (Raw)'])
         }
         return null;
       },
     });
-		
+
 		this.registerCapability('measure_battery', 'BATTERY');
 	}
 
