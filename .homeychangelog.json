@@ -7,5 +7,38 @@
   },
   "2.0.2": {
     "en": "Added extra devices"
+  },
+  "2.0.3": {
+    "en": "Bugfixes for dimming devices"
+  },
+  "2.0.4": {
+    "en": "Bugfix AD142"
+  },
+  "2.0.5": {
+    "en": "Added AN145"
+  },
+  "2.0.6": {
+    "en": "Fix AN145"
+  },
+  "2.0.7": {
+    "en": "SP816 update"
+  },
+  "2.0.9": {
+    "en": "Added SM810"
+  },
+  "2.1.0": {
+    "en": "Fix for SP103 (hopefully)"
+  },
+  "2.1.2": {
+    "en": "SP103 and AN181 fix"
+  },
+  "2.1.3": {
+    "en": "SP103 alarm fix"
+  },
+  "2.1.4": {
+    "en": "SP103 fix"
+  },
+  "2.1.5": {
+    "en": "ST812 manufacturer ID"
   }
 }

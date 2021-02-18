@@ -1,6 +1,6 @@
 {
   "id": "com.everspring",
-  "version": "2.1.0",
+  "version": "2.1.5",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -1289,7 +1289,9 @@
         ]
       },
       "zwave": {
-        "manufacturerId": 96,
+        "manufacturerId": [
+          96
+        ],
         "productTypeId": 11,
         "productId": 1,
         "learnmode": {
